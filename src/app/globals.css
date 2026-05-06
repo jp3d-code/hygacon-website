@@ -12,7 +12,7 @@
   --popover-foreground: oklch(0.2101 0.0318 264.6645);
   --primary: oklch(0.7457 0.1404 85.89);
   --primary-foreground: oklch(0.2101 0.0318 264.6645);
-  --secondary: oklch(0.536 0.0398 196.028);
+  --secondary: oklch(0.3603 0.0885 260.15);
   --secondary-foreground: oklch(1 0 0);
   --muted: oklch(0.967 0.0029 264.5419);
   --muted-foreground: oklch(0.551 0.0234 264.3637);
@@ -179,6 +179,10 @@
   --tracking-wide: calc(var(--tracking-normal) + 0.025em);
   --tracking-wider: calc(var(--tracking-normal) + 0.05em);
   --tracking-widest: calc(var(--tracking-normal) + 0.1em);
+
+  --background-size-size-200: 200% 200%;
+  --background-position-pos-0: 0% 0%;
+  --background-position-pos-100: 100% 100%;
 }
 
 @layer base {
