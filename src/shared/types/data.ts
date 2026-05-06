@@ -9,6 +9,7 @@ export type Service = {
 export type Sector = {
   name: string;
   description: string;
+  img: string;
 };
 
 export type Value = {
