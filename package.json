@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "biome check --write",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "dev:vinext": "vinext dev --port 3000",
+    "build:vinext": "vinext build",
+    "start:vinext": "vinext start"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
@@ -17,8 +20,8 @@
     "lucide-react": "^1.14.0",
     "next": "16.2.4",
     "next-themes": "^0.4.6",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
     "recharts": "3.8.0",
     "shadcn": "^4.6.0",
     "tailwind-merge": "^3.5.0",
@@ -30,7 +33,13 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.0.1",
+    "@vitejs/plugin-rsc": "^0.5.25",
+    "react-server-dom-webpack": "^19.2.5",
     "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+    "typescript": "^5",
+    "vinext": "^0.0.47",
+    "vite": "^8.0.10"
+  },
+  "type": "module"
 }
