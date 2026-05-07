@@ -17,3 +17,10 @@ export type Value = {
   name: string;
   description: string;
 };
+
+export type Statistic = {
+  name: string;
+  prefix?: string;
+  number: number;
+  suffix?: string;
+};
