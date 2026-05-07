@@ -2,17 +2,17 @@ const certifications = [
   {
     name: "ISO 9001",
     description: "Gestión de Calidad",
-    img: "/assets/certifications/iso-9001.png",
+    img: "https://www.hlcsac.com/images/iso9001.png",
   },
   {
     name: "IQNET",
     description: "Sistema de Gestión Certificado",
-    img: "/assets/certifications/iqnet.png",
+    img: "https://www.hlcsac.com/images/iqnet.jpg",
   },
   {
     name: "ISO 45001",
     description: "Seguridad y Salud Ocupacional",
-    img: "/assets/certifications/iso-45001.png",
+    img: "https://www.hlcsac.com/images/iso45001.png",
   },
 ];
 

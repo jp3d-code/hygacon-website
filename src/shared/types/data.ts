@@ -24,3 +24,9 @@ export type Statistic = {
   number: number;
   suffix?: string;
 };
+
+export type SocialNetwork = {
+  icon: LucideIcon;
+  href: string;
+  name: string;
+};
