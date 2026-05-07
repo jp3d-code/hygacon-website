@@ -1,3 +1,4 @@
+import React from "react";
 import { cn } from "@/shared/lib/utils";
 
 export function Section({
@@ -8,7 +9,7 @@ export function Section({
   return (
     <section
       className={cn(
-        "flex w-full items-center justify-center px-4 py-20",
+        "flex w-full items-center justify-center px-4 pt-20 pb-24",
         className,
       )}
       {...props}
@@ -26,7 +27,7 @@ export function Container({
   return (
     <div
       className={cn(
-        "flex w-full max-w-7xl flex-col items-center justify-center gap-12",
+        "flex w-full max-w-7xl flex-col items-center justify-center gap-20",
         className,
       )}
       {...props}
@@ -41,6 +42,17 @@ export function SectionHeader({
   className,
   ...props
 }: React.ComponentProps<"div">) {
+  const childrenArray = React.Children.toArray(children);
+
+  const separator = (
+    <div className="h-0.75 w-16 rounded-full bg-primary" key="separator" />
+  );
+
+  const content =
+    childrenArray.length >= 3
+      ? [...childrenArray.slice(0, 2), separator, ...childrenArray.slice(2)]
+      : [...childrenArray, separator];
+
   return (
     <div
       className={cn(
@@ -49,13 +61,12 @@ export function SectionHeader({
       )}
       {...props}
     >
-      {children}
-      <div className="h-0.75 w-16 rounded-full bg-primary"></div>
+      {content}
     </div>
   );
 }
 
-export function SectionSubtitle({
+export function SectionOverline({
   children,
   className,
   ...props
@@ -87,5 +98,23 @@ export function SectionTitle({
       <span className="text-secondary">{first}</span>{" "}
       <span className="text-primary">{second}</span>
     </h3>
+  );
+}
+
+export function SectionDescription({
+  children,
+  className,
+  ...props
+}: React.ComponentProps<"p">) {
+  return (
+    <p
+      className={cn(
+        "w-full max-w-xl text-center text-lg text-muted-foreground",
+        className,
+      )}
+      {...props}
+    >
+      {children}
+    </p>
   );
 }
