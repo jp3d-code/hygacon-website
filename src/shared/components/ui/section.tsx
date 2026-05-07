@@ -94,7 +94,13 @@ export function SectionTitle({
   second: string;
 }) {
   return (
-    <h3 className={cn("font-black text-4xl uppercase", className)} {...props}>
+    <h3
+      className={cn(
+        "flex flex-wrap items-center justify-center font-black text-4xl uppercase",
+        className,
+      )}
+      {...props}
+    >
       <span className="text-secondary">{first}</span>{" "}
       <span className="text-primary">{second}</span>
     </h3>
