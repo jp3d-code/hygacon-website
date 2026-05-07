@@ -1,8 +1,9 @@
+import { MoveRight } from "lucide-react";
 import {
   Container,
   Section,
   SectionHeader,
-  SectionSubtitle,
+  SectionOverline,
   SectionTitle,
 } from "@/shared/components/ui/section";
 import sectors from "@/shared/data/sectors";
@@ -12,7 +13,7 @@ export function Sectors() {
     <Section>
       <Container>
         <SectionHeader>
-          <SectionSubtitle>Áreas de especialización</SectionSubtitle>
+          <SectionOverline>Áreas de especialización</SectionOverline>
           <SectionTitle first="Nuestros" second="Sectores" />
         </SectionHeader>
         <div className="grid w-full items-center justify-center gap-6 lg:grid-cols-3">
@@ -37,12 +38,15 @@ export function Sectors() {
                 </span>
               </div>
               <div className="h-0.75 w-10 rounded-full bg-primary transition-[width] group-hover:w-20"></div>
-              <span className="text-accent/90 text-sm">
+              <span className="text-sm text-white/70">
                 {sector.description}
               </span>
-              <span className="text-primary text-sm uppercase tracking-widest">
-                Ver mas
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="text-primary text-sm uppercase tracking-widest">
+                  Ver mas
+                </span>
+                <MoveRight className="text-primary" size={15} />
+              </div>
             </div>
           ))}
         </div>
