@@ -16,7 +16,7 @@ function LinkComp({ className, variant, size, children, ...props }: Props) {
       {...props}
       className={cn(
         buttonVariants({ variant, size }),
-        "py-1 font-medium text-sm tracking-widest",
+        "font-medium tracking-widest",
         className,
       )}
     >
