@@ -1,3 +1,5 @@
+import { Certifications } from "@/modules/home/components/certifications";
+import { RequestQuote } from "@/modules/home/components/request-quote";
 import { Sectors } from "@/modules/home/components/sectors";
 import { Services } from "@/modules/home/components/services";
 import { Statistics } from "@/modules/home/components/statistics";
@@ -10,6 +12,8 @@ export default function Home() {
       <Services />
       <WhyUs />
       <Statistics />
+      <Certifications />
+      <RequestQuote />
     </>
   );
 }
