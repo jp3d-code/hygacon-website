@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Merriweather, Outfit } from "next/font/google";
 import "./globals.css";
+import { Footer } from "@/shared/components/layout/footer";
 import { Navbar } from "@/shared/components/layout/navbar";
 import { Providers } from "@/shared/components/providers";
 import { routes } from "@/shared/config/routes";
@@ -38,6 +39,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           <main>{children}</main>
+          <Footer />
         </Providers>
       </body>
     </html>
