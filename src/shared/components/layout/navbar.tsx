@@ -8,6 +8,7 @@ import {
   SheetTrigger,
 } from "@/shared/components/ui/sheet";
 import { routes } from "@/shared/config/routes";
+import socialNetworks from "@/shared/data/social-networks";
 
 const navItems = [
   routes.organizacion,
@@ -18,17 +19,31 @@ const navItems = [
 
 function HeaderDesktop() {
   return (
-    <nav className="hidden items-center gap-4 font-medium text-sm md:flex">
-      {navItems.map((route) => (
-        <LinkBtm
-          variant="underline"
-          key={route.path}
-          href={route.path}
-          className="text-xs uppercase"
-        >
-          {route.name}
-        </LinkBtm>
-      ))}
+    <nav className="hidden items-center gap-8 font-medium text-sm md:flex">
+      <div className="flex items-center gap-4">
+        {navItems.map((route) => (
+          <LinkBtm
+            variant="underline"
+            key={route.path}
+            href={route.path}
+            className="text-xs uppercase"
+          >
+            {route.name}
+          </LinkBtm>
+        ))}
+      </div>
+      <div className="flex gap-1">
+        {socialNetworks.map((network) => (
+          <Link
+            key={network.name}
+            href={network.href}
+            target="_blank"
+            className="text-gray-500 transition-colors duration-300 hover:text-gray-400"
+          >
+            <network.icon size={18} />
+          </Link>
+        ))}
+      </div>
       <LinkBtm
         variant="default"
         size={"lg"}
@@ -92,8 +107,8 @@ function HeaderMobile() {
 
 export function Navbar() {
   return (
-    <header className="my-6 w-full">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4">
+    <header className="my-6 w-full px-4">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
         <Link href={routes.path} className="font-semibold text-sm uppercase">
           KW
         </Link>
