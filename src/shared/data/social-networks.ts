@@ -1,6 +1,6 @@
 import {
   IconBrandFacebookFilled,
-  IconBrandInstagramFilled,
+  IconBrandInstagram,
   IconBrandLinkedinFilled,
   IconBrandYoutubeFilled,
 } from "@tabler/icons-react";
@@ -18,7 +18,7 @@ const socialNetworks: SocialNetwork[] = [
     name: "Facebook",
   },
   {
-    icon: IconBrandInstagramFilled,
+    icon: IconBrandInstagram,
     href: "https://www.instagram.com/ing_const_jp/",
     name: "Instagram",
   },
