@@ -10,7 +10,7 @@ export function Footer() {
 
   return (
     <footer className="flex flex-col items-center border-primary border-t-2 bg-[#112239] pt-16 pb-8 text-white">
-      <Container className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <Container className="mb-12 grid grid-cols-1 gap-12 px-4 md:grid-cols-2 lg:grid-cols-4">
         <div className="flex flex-col gap-4">
           <Link
             href={routes.path}
@@ -65,7 +65,7 @@ export function Footer() {
           <h4 className="mb-6 font-bold text-primary text-xs uppercase tracking-widest">
             Servicios
           </h4>
-          <ul className="space-y-3">
+          <ul className="space-y-3 pl-4">
             {services.map((service) => (
               <li key={service.name} className="group flex items-center gap-2">
                 <div className="transform-[width] h-0.5 w-0 rounded-full bg-primary duration-300 group-hover:w-3"></div>
