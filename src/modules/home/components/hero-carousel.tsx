@@ -97,7 +97,7 @@ export default function HeroCarousel() {
 
               <Button
                 type="button"
-                variant={"outline"}
+                variant={"outline-dark"}
                 size={"lg"}
                 className="font-bold uppercase"
               >
