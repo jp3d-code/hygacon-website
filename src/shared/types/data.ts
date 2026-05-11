@@ -30,3 +30,53 @@ export type SocialNetwork = {
   href: string;
   name: string;
 };
+
+export type HistoryEvent = {
+  year: string;
+  title: string;
+  description: string;
+};
+
+export type TeamMember = {
+  name: string;
+  role: string;
+  img?: string;
+  bio?: string;
+};
+
+export type CorporateValue = {
+  title: string;
+  description: string;
+};
+
+export type Certification = {
+  name: string;
+  description: string;
+  img: string;
+};
+
+type IdentityItemBase = {
+  id: string;
+  title: string;
+  icon: LucideIcon;
+};
+
+export type IdentityItemContent = IdentityItemBase & {
+  content: string;
+};
+
+export type IdentityItemList = IdentityItemBase & {
+  items: string[];
+};
+
+export type IdentityItem = IdentityItemContent | IdentityItemList;
+
+export type Pilar = {
+  title: string;
+  description: string;
+};
+
+export type ManagementSystem = {
+  pilars: Pilar[];
+  commitments: string[];
+};

@@ -1,4 +1,6 @@
-const certifications = [
+import type { Certification } from "@/shared/types/data";
+
+const certifications: Certification[] = [
   {
     name: "ISO 9001",
     description: "Gestión de Calidad",
