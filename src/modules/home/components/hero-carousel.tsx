@@ -52,7 +52,7 @@ export default function HeroCarousel() {
         <motion.div
           key={currentSlide.id}
           className="absolute inset-0"
-          initial={{ opacity: 0, scale: 1.08 }}
+          initial={{ opacity: index === 0 ? 1 : 0, scale: 1.08 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{
@@ -64,6 +64,7 @@ export default function HeroCarousel() {
             src={currentSlide.image}
             alt=""
             className="h-full w-full object-cover"
+            fetchPriority={index === 0 ? "high" : "auto"}
           />
         </motion.div>
       </AnimatePresence>
