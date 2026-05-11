@@ -101,7 +101,7 @@ export function SectionTitle({
       )}
       {...props}
     >
-      <span className="text-secondary">{first}</span>{" "}
+      <span className={cn("text-secondary", className)}>{first}</span>{" "}
       <span className="text-primary">{second}</span>
     </h3>
   );
