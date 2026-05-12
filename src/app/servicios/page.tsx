@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
-import Title from "@/modules/servicios/components/title";
-import { routes } from "@/shared/config/routes";
-
-export const metadata: Metadata = {
-  title: routes.servicios.name,
-};
+import { ServiceDetail } from "@/modules/servicios/components/service-detail";
+import services from "@/shared/data/services";
 
 export default function ServiciosPage() {
-  return <Title />;
+  return (
+    <>
+      {services.map(({ icon, ...service }, i) => (
+        <ServiceDetail key={service.name} service={service} index={i} />
+      ))}
+    </>
+  );
 }

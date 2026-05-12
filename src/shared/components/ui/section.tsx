@@ -91,7 +91,7 @@ export function SectionTitle({
   ...props
 }: React.ComponentProps<"h3"> & {
   first: string;
-  second: string;
+  second?: string;
 }) {
   return (
     <h3
@@ -102,7 +102,7 @@ export function SectionTitle({
       {...props}
     >
       <span className={cn("text-secondary", className)}>{first}</span>{" "}
-      <span className="text-primary">{second}</span>
+      {second && <span className="text-primary">{second}</span>}
     </h3>
   );
 }
