@@ -3,7 +3,14 @@ import type { LucideIcon } from "lucide-react";
 export type Service = {
   icon: LucideIcon;
   name: string;
+  image: string;
+  brochure: string;
+  excerpt: string;
   description: string;
+  categories: {
+    label: string;
+    items: string[];
+  }[];
 };
 
 export type Sector = {

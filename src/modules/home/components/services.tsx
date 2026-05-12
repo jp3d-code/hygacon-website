@@ -36,7 +36,7 @@ export function Services() {
                   {service.name}
                 </span>
                 <span className="text-secondary/70 text-sm">
-                  {service.description}
+                  {service.excerpt}
                 </span>
               </div>
               <Link
