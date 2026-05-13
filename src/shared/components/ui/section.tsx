@@ -1,3 +1,7 @@
+"use client";
+
+import { motion, useInView, useReducedMotion } from "motion/react";
+import { easeOutQuint } from "@/shared/animations/easings";
 import React from "react";
 import { cn } from "@/shared/lib/utils";
 
@@ -44,8 +48,29 @@ export function SectionHeader({
 }: React.ComponentProps<"div">) {
   const childrenArray = React.Children.toArray(children);
 
+  const separatorRef = React.useRef<HTMLDivElement | null>(null);
+  const isInView = useInView(separatorRef, {
+    once: true,
+    amount: 0.4,
+  });
+  const shouldReduceMotion = useReducedMotion();
+
   const separator = (
-    <div className="h-0.75 w-16 rounded-full bg-primary" key="separator" />
+    <motion.div
+      ref={separatorRef}
+      className="h-0.75 w-16 origin-left rounded-full bg-primary"
+      initial={{ scaleX: shouldReduceMotion ? 1 : 0 }}
+      animate={{ scaleX: isInView || shouldReduceMotion ? 1 : 0 }}
+      transition={
+        shouldReduceMotion
+          ? { duration: 0 }
+          : {
+              duration: 0.6,
+              ease: easeOutQuint,
+            }
+      }
+      key="separator"
+    />
   );
 
   const content =
