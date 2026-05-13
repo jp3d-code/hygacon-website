@@ -24,7 +24,7 @@ export function IdentitySection() {
               className="relative flex flex-col gap-4 overflow-hidden rounded-lg border border-border bg-background p-8 shadow-zinc-600 transition-all duration-300 hover:-translate-y-1 hover:drop-shadow-xl"
             >
               <div className="absolute top-0 left-0 h-1 w-full bg-primary"></div>
-              <h3 className="font-bold text-lg text-secondary uppercase tracking-wide">
+              <h3 className="font-bold font-condensed text-secondary text-xl uppercase tracking-wide">
                 {item.title}
               </h3>
 

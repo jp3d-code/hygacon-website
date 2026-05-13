@@ -26,7 +26,7 @@ export function Services() {
           {services.map((service) => (
             <div
               key={service.name}
-              className="group relative flex flex-col items-start justify-start gap-6 rounded-lg border border-border bg-background p-8 shadow-gray-600 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-primary/50 hover:drop-shadow-xl"
+              className="group relative flex h-full flex-col items-start justify-start gap-6 rounded-lg border border-border bg-background p-8 shadow-gray-600 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-primary/50 hover:drop-shadow-xl"
             >
               <div className="aspect-square rounded-md bg-accent p-3 transition-all duration-300 group-hover:scale-105 group-hover:bg-amber-100/60">
                 <service.icon className="h-full w-full text-secondary transition-colors duration-300 group-hover:text-primary" />

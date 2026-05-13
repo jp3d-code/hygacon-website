@@ -6,14 +6,14 @@ import { routes } from "@/shared/config/routes";
 export function RequestQuote() {
   return (
     <Section className="bg-secondary">
-      <Container className="flex flex-row items-center justify-between">
+      <Container className="flex flex-col items-center justify-between md:flex-row">
         <div className="flex flex-col gap-4">
-          <h2 className="flex gap-2 font-black text-4xl uppercase">
+          <h2 className="flex flex-wrap justify-center gap-2 font-black text-4xl uppercase md:justify-start">
             <span className="text-secondary-foreground">¿Tienes un</span>
             <span className="text-primary">proyecto</span>
             <span className="text-secondary-foreground">en mente?</span>
           </h2>
-          <p className="text-accent/55">
+          <p className="text-center text-accent/55 md:text-start">
             Contáctanos y recibe una consulta sin compromiso de nuestros
             expertos.
           </p>
