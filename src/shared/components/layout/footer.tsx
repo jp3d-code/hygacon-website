@@ -10,7 +10,10 @@ export function Footer() {
 
   return (
     <footer className="flex flex-col items-center border-primary border-t-3 bg-[#112239] pt-16 pb-8 text-white">
-      <Container className="mb-12 grid grid-cols-1 items-start gap-12 px-4 md:grid-cols-2 lg:grid-cols-4">
+      <Container
+        animation={false}
+        className="mb-12 grid grid-cols-1 items-start gap-12 px-4 md:grid-cols-2 lg:grid-cols-4"
+      >
         <div className="flex flex-col gap-4">
           <Link
             href={routes.path}
@@ -109,7 +112,10 @@ export function Footer() {
       </Container>
 
       <div className="w-full border-white/20 border-t pt-8"></div>
-      <Container className="flex flex-col items-center justify-between gap-4 md:flex-row">
+      <Container
+        animation={false}
+        className="flex flex-col items-center justify-between gap-4 md:flex-row"
+      >
         <p className="text-center text-slate-400 text-xs md:text-left">
           © {currentYear} HLC Ingeniería y Construcción S.A.C. Todos los
           derechos reservados.
