@@ -1,6 +1,5 @@
 import type { Variants } from "motion/react";
-
-const heroEasing = [0.22, 1, 0.36, 1] as const;
+import { easeOutQuint } from "@/shared/animations/easings";
 
 export const heroContentVariants: Variants = {
   hidden: {
@@ -47,7 +46,7 @@ export const heroItemVariants: Variants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: heroEasing,
+      ease: easeOutQuint,
     },
   },
   exit: {
@@ -55,7 +54,7 @@ export const heroItemVariants: Variants = {
     y: -16,
     transition: {
       duration: 0.25,
-      ease: heroEasing,
+      ease: easeOutQuint,
     },
   },
 };
