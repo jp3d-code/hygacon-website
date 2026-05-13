@@ -10,12 +10,7 @@ import {
 import { routes } from "@/shared/config/routes";
 import socialNetworks from "@/shared/data/social-networks";
 
-const navItems = [
-  routes.organizacion,
-  routes.servicios,
-  routes.proyectos,
-  routes.atencion,
-];
+const navItems = [routes.organizacion, routes.servicios, routes.atencion];
 
 function HeaderDesktop() {
   return (
@@ -107,7 +102,7 @@ function HeaderMobile() {
 
 export function Navbar() {
   return (
-    <header className="my-6 w-full px-4">
+    <header className="my-5 w-full px-4">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
         <Link href={routes.path} className="font-semibold text-sm uppercase">
           KW

@@ -52,7 +52,7 @@ export function AboutSection() {
 
           <div className="flex flex-wrap gap-4 pt-2">
             <LinkBtm
-              href={routes.proyectos.path}
+              href={routes.contacto.path}
               variant={"secondary"}
               size={"lg"}
               className="font-semibold uppercase"
