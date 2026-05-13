@@ -4,6 +4,11 @@ import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { Button } from "@/shared/components/ui/button";
 import { Section } from "@/shared/components/ui/section";
+import {
+  heroContentVariants,
+  heroItemVariants,
+  heroTitleVariants,
+} from "@/modules/home/animations/hero-stagger";
 import { cn } from "@/shared/lib/utils";
 
 const slides = [
@@ -75,22 +80,31 @@ export default function HeroCarousel() {
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide.id}
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -40 }}
-            transition={{
-              duration: 0.7,
-              ease: [0.22, 1, 0.36, 1],
-            }}
+            variants={heroContentVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
             className="max-w-5xl"
           >
-            <h1 className="flex flex-col font-extrabold text-4xl text-white uppercase leading-tight md:text-6xl">
-              <span>{currentSlide.title}</span>
-              <span className="text-primary">{currentSlide.highlight}</span>
-              <span>{currentSlide.subtitle}</span>
-            </h1>
+            <motion.h1
+              variants={heroTitleVariants}
+              className="flex flex-col font-extrabold text-4xl text-white uppercase leading-tight md:text-6xl"
+            >
+              <motion.span variants={heroItemVariants}>
+                {currentSlide.title}
+              </motion.span>
+              <motion.span variants={heroItemVariants} className="text-primary">
+                {currentSlide.highlight}
+              </motion.span>
+              <motion.span variants={heroItemVariants}>
+                {currentSlide.subtitle}
+              </motion.span>
+            </motion.h1>
 
-            <div className="mt-10 flex gap-4">
+            <motion.div
+              variants={heroItemVariants}
+              className="mt-10 flex gap-4"
+            >
               <Button size={"lg"} type="button" className="font-bold uppercase">
                 Nuestros servicios
               </Button>
@@ -103,7 +117,7 @@ export default function HeroCarousel() {
               >
                 Ver proyectos
               </Button>
-            </div>
+            </motion.div>
           </motion.div>
         </AnimatePresence>
       </div>
