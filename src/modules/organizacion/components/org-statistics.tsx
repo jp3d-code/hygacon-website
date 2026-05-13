@@ -1,28 +1,6 @@
 import { Counter } from "@/shared/components/ui/counter";
 import { Container, Section } from "@/shared/components/ui/section";
-
-const orgStats = [
-  {
-    num: 25,
-    label: "Años de experiencia",
-    desc: "Una trayectoria sólida al servicio de la industria peruana.",
-  },
-  {
-    num: 767,
-    label: "Proyectos ejecutados",
-    desc: "Con cero accidentes mortales en toda nuestra historia.",
-  },
-  {
-    num: 106,
-    label: "Partners estratégicos",
-    desc: "Alianzas con empresas líderes a nivel nacional e internacional.",
-  },
-  {
-    num: 312,
-    label: "Clientes satisfechos",
-    desc: "La confianza de las empresas más importantes del sector.",
-  },
-];
+import orgStatistics from "@/shared/data/org-statistics";
 
 export function OrgStatistics() {
   return (
@@ -38,7 +16,7 @@ export function OrgStatistics() {
 
       <Container className="z-10">
         <div className="grid w-full grid-cols-2 gap-10 md:grid-cols-4">
-          {orgStats.map((stat, index) => (
+          {orgStatistics.map((stat, index) => (
             <div
               key={index}
               className="flex flex-col items-center gap-2 text-center"

@@ -32,6 +32,12 @@ export type Statistic = {
   suffix?: string;
 };
 
+export type OrgStatistic = {
+  num: number;
+  label: string;
+  desc: string;
+};
+
 export type SocialNetwork = {
   icon: LucideIcon;
   href: string;
