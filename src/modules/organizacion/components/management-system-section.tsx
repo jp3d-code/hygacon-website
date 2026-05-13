@@ -3,6 +3,7 @@ import {
   Section,
   SectionHeader,
   SectionOverline,
+  SectionTitle,
 } from "@/shared/components/ui/section";
 import { managementSystem } from "@/shared/data/management-system";
 
@@ -28,13 +29,14 @@ export function ManagementSystemSection() {
             Sistema Integrado de Gestión — Versión: 05 · Lima, 13 de Mayo de
             2025
           </SectionOverline>
-          <h3 className="flex flex-wrap items-center justify-center gap-x-2 font-black text-4xl uppercase">
-            <span className="text-white">Nuestro</span>{" "}
-            <span className="text-primary">Sistema de Gestión</span>
-          </h3>
+          <SectionTitle
+            className="text-secondary-foreground"
+            first="Nuestro"
+            second="Sistema de Gestión"
+          />
         </SectionHeader>
 
-        <p className="max-w-3xl text-center text-sm text-white/80 leading-relaxed">
+        <p className="max-w-3xl text-center text-white/80 leading-relaxed">
           Conscientes de nuestro propósito y en cumplimiento de nuestros
           objetivos estratégicos, consideramos que la calidad, seguridad, salud
           ocupacional y el cuidado del medio ambiente son prioridades en nuestra
@@ -48,7 +50,7 @@ export function ManagementSystemSection() {
               key={index}
               className="flex flex-col gap-3 rounded-lg border border-white/20 bg-white/5 p-6 backdrop-blur-sm"
             >
-              <h3 className="text-center font-bold text-primary text-sm uppercase tracking-wide">
+              <h3 className="text-center font-bold font-condensed text-lg text-primary uppercase tracking-wide">
                 {pilar.title}
               </h3>
               <p className="text-center text-sm text-white/70 leading-relaxed">
