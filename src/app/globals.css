@@ -36,9 +36,9 @@
   --sidebar-accent-foreground: oklch(0.2101 0.0318 264.6645);
   --sidebar-border: oklch(0.9276 0.0058 264.5313);
   --sidebar-ring: oklch(0.7457 0.1404 85.89);
-  --font-sans: Outfit, ui-sans-serif, sans-serif, system-ui;
-  --font-serif: Merriweather, ui-serif, serif;
-  --font-mono: JetBrains Mono, ui-monospace, monospace;
+  --font-sans: "DM Sans", ui-sans-serif, sans-serif, system-ui;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-condensed: "Barlow Condensed", "DM Sans", ui-sans-serif, sans-serif, system-ui;
   --radius: 0.3rem;
   --shadow-x: 0px;
   --shadow-y: 1px;
@@ -96,9 +96,9 @@
   --sidebar-accent-foreground: oklch(0.8109 0 0);
   --sidebar-border: oklch(0.252 0 0);
   --sidebar-ring: oklch(0.7214 0.1337 49.9802);
-  --font-sans: Outfit, ui-sans-serif, sans-serif, system-ui;
-  --font-serif: Merriweather, ui-serif, serif;
-  --font-mono: JetBrains Mono, ui-monospace, monospace;
+   --font-sans: "DM Sans", ui-sans-serif, sans-serif, system-ui;
+   --font-mono: "JetBrains Mono", ui-monospace, monospace;
+   --font-condensed: "Barlow Condensed", "DM Sans", ui-sans-serif, sans-serif, system-ui;
   --radius: 0.3rem;
   --shadow-x: 0px;
   --shadow-y: 1px;
@@ -157,7 +157,7 @@
 
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
-  --font-serif: var(--font-serif);
+  --font-condensed: var(--font-condensed);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -194,5 +194,11 @@
   }
   html {
     @apply font-sans;
+  }
+}
+
+@layer utilities {
+  .font-condensed {
+    font-family: var(--font-condensed);
   }
 }

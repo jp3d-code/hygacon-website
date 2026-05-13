@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Merriweather, Outfit } from "next/font/google";
+import { Barlow_Condensed, DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/shared/components/layout/footer";
 import { Navbar } from "@/shared/components/layout/navbar";
 import { Providers } from "@/shared/components/providers";
 import { routes } from "@/shared/config/routes";
 
-const fontSans = Outfit({
+const fontSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
 
-const fontSerif = Merriweather({
+const fontCondensed = Barlow_Condensed({
   subsets: ["latin"],
-  variable: "--font-serif",
+  weight: ["400", "600", "700", "800", "900"],
+  variable: "--font-condensed",
 });
 
 const fontMono = JetBrains_Mono({
@@ -34,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${fontSans.variable} ${fontSerif.variable} ${fontMono.variable} antialiased`}
+        className={`${fontSans.variable} ${fontCondensed.variable} ${fontMono.variable} antialiased`}
       >
         <Providers>
           <Navbar />
