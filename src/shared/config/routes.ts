@@ -19,11 +19,11 @@ const serviciosRoute = createStaticRoute({
   fullPath: `${APP_URL}/servicios`,
 });
 
-const proyectosRoute = createStaticRoute({
-  name: "Proyectos",
-  path: "/proyectos",
-  fullPath: `${APP_URL}/proyectos`,
-});
+// const proyectosRoute = createStaticRoute({
+//   name: "Proyectos",
+//   path: "/proyectos",
+//   fullPath: `${APP_URL}/proyectos`,
+// });
 
 const atencionRoute = createStaticRoute({
   name: "Atención",
@@ -47,9 +47,6 @@ export const routes = {
   },
   contacto: {
     ...contactoRoute,
-  },
-  proyectos: {
-    ...proyectosRoute,
   },
   servicios: {
     ...serviciosRoute,
