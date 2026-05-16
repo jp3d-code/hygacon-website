@@ -93,3 +93,9 @@ export type ManagementSystem = {
   pilars: Pilar[];
   commitments: string[];
 };
+
+export type Image = {
+  name: string;
+  alt: string;
+  description: string;
+};
