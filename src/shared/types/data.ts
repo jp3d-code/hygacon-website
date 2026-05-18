@@ -115,3 +115,18 @@ export type ClientCommitment = {
   title: string;
   description: string;
 };
+
+export type ProjectItem = {
+  id: string;
+  name: string;
+  sector: string;
+  serviceArea: string;
+  status: string;
+  country: string;
+  client: string;
+  location: string;
+  year: string;
+  modality: string;
+  summary: string;
+  image: string;
+};

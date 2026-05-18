@@ -13,6 +13,7 @@ import socialNetworks from "@/shared/data/social-networks";
 const navItems = [
   routes.organizacion,
   routes.servicios,
+  routes.proyectos,
   routes.clientes,
   routes.atencion,
 ];
