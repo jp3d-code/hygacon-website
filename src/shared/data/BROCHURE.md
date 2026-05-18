@@ -1,113 +1,140 @@
-A continuación, presento la información extraída y estructurada del brochure corporativo de **Consorcio HYGACON 2025**, incluyendo las descripciones de las imágenes conforme a lo solicitado.
+A continuación, presento el consolidado más detallado y estructurado de toda la información contenida en el brochure corporativo del **Consorcio HYGACON 2025**, incluyendo las descripciones de las imágenes solicitadas.
 
 ---
 
-### 1. Identificación de la Empresa
-*   **Nombre:** Consorcio HYGACON.
+### 1. Identificación y Contacto de la Empresa
+*   **Nombre Jurídico:** Consorcio HYGACON.
 *   **RUC:** 20611996251.
-*   **Sedes:**
-    *   **Arequipa (Anexo El Canto):** Av. Libertad N° 2058, Distrito de Cocachacra.
-    *   **Arequipa (Cercado):** Urb. La Victoria – Calle Hipólito Unanue N° 140.
-*   **Contactos:**
+*   **Sede Principal (Anexo El Canto):** Av. Libertad N° 2058, Distrito de Cocachacra, Departamento de Arequipa.
+*   **Sede Cercado:** Urb. La Victoria – Calle Hipólito Unanue N° 140, Distrito de Arequipa.
+*   **Canales de Contacto:**
     *   **Celular:** 974628766.
-    *   **Correos electrónicos:** hayro_hyrum@gmail.com y hygaconperu@gmail.com.
+    *   **Emails:** hayro_hyrum@gmail.com y hygaconperu@gmail.com.
 
-**image:** Logo de Consorcio HYGACON sobre fondo negro, mostrando un recuadro con iconos de una grúa de construcción, edificios, un martillo cruzado sobre un techo de casa y una brocha de pintura.
-
----
-
-### 2. Filosofía Corporativa
-*   **Misión:** Ejecutar proyectos buscando la mejora continua en cada proceso, generando valor para los clientes con altos estándares de seguridad, medio ambiente y responsabilidad social, manteniéndose a la vanguardia tecnológica.
-*   **Visión:** Ser el consorcio líder a nivel nacional en soluciones empresariales de construcción, minería y medio ambiente.
-*   **Valores:**
-    *   **Compromiso:** Orientación al trabajo bien realizado y satisfacción del cliente.
-    *   **Respeto:** Vínculos eficientes, corteses y sin actitudes de soberbia.
-    *   **Confianza:** Relaciones basadas en la consideración personal y profesional.
-    *   **Trabajo en Equipo:** Metodología colaborativa para mejores resultados.
-    *   **Actitud de Servicio:** Apoyo total en los objetivos de los clientes.
-    *   **Eficiencia:** Optimización de recursos para cumplir con lo solicitado.
-
-**image:** Personas con las manos unidas en el centro, simbolizando el trabajo en equipo y la colaboración.
+**image:** (Logo oficial del Consorcio HYGACON sobre fondo negro; presenta un cuadro con siluetas de grúas, edificios modernos, un techo de casa con un martillo y una brocha de pintura).
 
 ---
 
-### 3. Servicios y Actividades
-El consorcio se especializa en las siguientes áreas:
-*   **Ingeniería:** Ejecución, supervisión y consultoría de obras de edificación, viales, terminales, aeropuertos, saneamiento, represas e irrigaciones.
-*   **Especialidades:** Proyectos electromecánicos, telecomunicaciones, ambientales y mineros.
-*   **Metalmecánica:** Trabajos en estructuras metálicas.
-*   **Comercial:** Importación, venta y alquiler de maquinarias, vehículos y equipos de construcción.
-*   **Servicios Generales:** Movimiento de tierras y soluciones empresariales integrales.
+### 2. Filosofía y Estrategia Corporativa
+*   **Misión:** Ejecución de proyectos bajo procesos de mejora continua, generando valor para los clientes con altos estándares de seguridad, medio ambiente y responsabilidad social, empleando tecnología de vanguardia.
+*   **Visión:** Consolidarse como el consorcio líder a nivel nacional en soluciones integrales para los sectores de construcción, minería y medio ambiente.
+*   **Valores Institucionales:**
+    *   **Compromiso:** Orientación a resultados y satisfacción plena del cliente.
+    *   **Respeto:** Vínculos profesionales basados en la eficiencia y la cortesía, sin soberbia.
+    *   **Confianza:** Relaciones de respaldo y seguridad para el personal y la sociedad.
+    *   **Trabajo en Equipo:** Metodología colaborativa para potenciar el talento humano.
+*   **Pilares Estratégicos:** Cuidado de la naturaleza (equilibrio natural), monitoreo de la competencia, vigilancia tecnológica, cumplimiento estricto de leyes gubernamentales y enfoque total en el cliente.
 
-**image:** Escena de construcción con un casco amarillo en primer plano sobre planos enrollados, y al fondo edificios modernos y grúas de construcción.
-
----
-
-### 4. Políticas y Estándares de Calidad
-La empresa opera bajo normativas legales y estándares exigidos por la gran minería. Sus políticas incluyen:
-*   Mejora continua y prevención de impactos ambientales negativos.
-*   Garantía de seguridad para el personal, equipos y procesos.
-*   Responsabilidad social para promover el desarrollo de los *stakeholders*.
-*   Reglamento interno, políticas de alcohol y drogas, y operación de equipo pesado/liviano.
-*   **Certificaciones ISO:** Cuenta con certificaciones en ISO 9001 (Calidad), ISO 14001 (Medio Ambiente), ISO 45001 (Salud y Seguridad), ISO 37001 (Anti-Soborno) e ISO 50001 (Gestión Energética).
-
-**image:** Certificado de Registro ISO 14001:2015 emitido por Otabu Global Services a nombre de Jasovi Ingeniería y Minería E.I.R.L..
-**image:** Certificado de Registro ISO 37001:2016 (Gestión Anti-Soborno) emitido por la misma entidad.
+**image:** (Gráfico representativo de la "Misión" y "Visión" mediante figuras humanas en 3D de color azul sosteniendo piezas de rompecabezas).
+**image:** (Fotografía de varias personas uniendo sus manos en el centro, simbolizando el trabajo en equipo y la unión organizacional).
 
 ---
 
-### 5. Plana Ejecutiva
-El consorcio cuenta con un staff multidisciplinario de profesionales y técnicos:
+### 3. Alcance de Servicios
+El consorcio ofrece soluciones en:
+*   **Ingeniería Civil:** Ejecución, supervisión y consultoría en obras viales, aeropuertos, terminales, represas, irrigaciones y edificaciones.
+*   **Saneamiento:** Proyectos de agua potable y alcantarillado.
+*   **Especialidades:** Proyectos electromecánicos, de telecomunicaciones, ambientales y mineros.
+*   **Metalmecánica:** Trabajos especializados en estructuras metálicas para minería.
+*   **Comercial:** Importación, venta y alquiler de maquinaria pesada, vehículos y equipos de construcción.
+
+**image:** (Escena de obra civil con un casco de seguridad amarillo en primer plano sobre planos técnicos, con grúas y edificios en construcción al fondo).
+
+---
+
+### 4. Políticas, Estándares y Certificaciones
+La empresa cumple estrictamente con el **Decreto Supremo 024-2016-EM** (Reglamento de Seguridad y Salud Ocupacional en Minería).
+*   **Políticas Internas:** Calidad, Seguridad (protección de personas y equipos), Medio Ambiente (prevención de impactos negativos), Responsabilidad Social (Stakeholders) y desarrollo de Recursos Humanos.
+*   **Estándares de Control:** Reglamento interno, políticas de alcohol y drogas, y protocolos de operación de equipo liviano y pesado.
+*   **Certificaciones ISO:** El brochure muestra el cumplimiento de los estándares **ISO 9001** (Calidad), **ISO 14001** (Gestión Ambiental), **ISO 45001** (Salud y Seguridad) e **ISO 37001** (Anti-soborno).
+
+**image:** (Ilustración de una marca de verificación verde sobre un pedestal, acompañada del texto "Política de Calidad").
+**image:** (Iconos circulares representativos de las certificaciones ISO 9001, 14001, 45001 y 37001 distribuidos en varias páginas).
+
+---
+
+### 5. Plana Ejecutiva y Staff
+Contamos con un equipo multidisciplinario liderado por:
 *   **Gerente General:** Ing. Hyrum G. Quispe Ticona.
-*   **Gerente de Trabajos de Saneamiento:** Ing. Jaime Soto Vilca.
-*   **Gerente de Área de Infraestructura:** Ing. Wilber Nina Quispe.
-*   **Gerente de Área de Metal Mecánico:** Ing. Jesús Ventura Arias.
+*   **Gerente de Saneamiento:** Ing. Jaime Soto Vilca.
+*   **Gerente de Infraestructura:** Ing. Wilber Nina Quispe.
+*   **Gerente de Metalmecánica:** Ing. Jesús Ventura Arias.
 *   **Administrador:** Ing. Anthony Quispe Ticona.
 *   **Contabilidad:** Lic. Rocío Laura Roca.
 *   **Logística:** Ing. Herbert Mamani Masco.
 
 ---
 
-### 6. Capacidad Operativa (Maquinaria)
-Disponen de una flota de marcas líderes con alto rendimiento. Algunos equipos destacados son:
-*   **04 Camionetas Pick Up:** Toyota Hilux (Modelos 2014, 2016, 2022).
-*   **05 Ómnibus:** Mercedes Benz (2016).
-*   **02 Cisternas de Agua:** Hino - Volvo (2016).
-*   **04 Excavadoras Hidráulicas:** Caterpillar (Modelos 330 D2 L y 325 DL).
-*   **06 Retroexcavadoras:** Caterpillar (Modelos 420F 4x4).
-*   **05 Camiones Volquete:** Volvo (Modelo FM 6X4R).
-*   **02 Minicargadores:** Caterpillar (226B).
-*   **Equipos menores:** Compactadores (Wacker), vibroapisonadores y torres de iluminación (Terex).
+### 6. Capacidad Operativa y Financiera
+*   **Solidez Financiera:** Capacidad de liquidez a corto, mediano y largo plazo, con respaldo de instituciones financieras para proyectos de gran envergadura.
+*   **Flota de Maquinaria:** Equipos de marcas líderes (Caterpillar, Volvo, Toyota, Mercedes Benz, Hino, Wacker, Terex).
 
-**image:** Camión volquete Volvo de color blanco y gris en una zona de trabajo.
-**image:** Excavadora hidráulica Caterpillar (CAT) trabajando en movimiento de tierras.
-**image:** Camioneta Toyota Hilux blanca estacionada, con logotipos en la puerta.
+| Unidad | Equipo / Maquinaria | Marca | Modelo | Año |
+| :--- | :--- | :--- | :--- | :--- |
+| 04 | Camioneta Pick Up | Toyota | Hilux | 2022 |
+| 05 | Camioneta Pick Up | Toyota | Hilux | 2016 |
+| 03 | Camioneta Pick Up | Toyota | Hilux | 2014 |
+| 05 | Ómnibus | Mercedes Benz | 1318 | 2016 |
+| 02 | Cisterna de Agua | Hino - Volvo | FM 500 | 2016 |
+| 02 | Excavadora Hidráulica | Caterpillar | 330 D2 L | 2017 |
+| 02 | Excavadora Hidráulica | Caterpillar | 325 DL | 2008 |
+| 04 | Retroexcavadora | Caterpillar | 420F 4x4 | 2017 |
+| 05 | Camión Volquete | Volvo | FM 6X4R | 2015 |
+| 02 | Minicargador | Caterpillar | 226B | 2015 |
+| 02 | Compactador Rodillo | Wacker | DR7H | 2016 |
+| 03 | Vibroapisonador | Wacker | BS 60 | 2016 |
+| 04 | Torre de Iluminación | Terex | RL4060 | 2015 |
 
----
-
-### 7. Capacidad Financiera
-*   Solidez financiera que garantiza el cumplimiento de obligaciones y ejecución de proyectos de gran envergadura.
-*   Respaldo de instituciones financieras y liquidez a corto, mediano y largo plazo.
-
-**image:** Gráfico de barras ascendente y monedas apiladas junto a edificios modernos, representando crecimiento y solidez económica.
-
----
-
-### 8. Experiencia (Obras y Expedientes)
-El consorcio ha realizado múltiples proyectos de saneamiento, infraestructura y defensas ribereñas:
-*   **Plaza Cívica en Tambillo (Puno):** Cliente Municipalidad de Ituata; presupuesto S/. 2,491,112 (Ejecución iniciada en 2021).
-*   **Saneamiento en Putina (Zona Centro B):** Cliente Municipalidad de San Antonio de Putina; monto S/. 5,465,603.61.
-*   **Agua Potable en Cuyocuyo y Ura Ayllu:** Presupuesto S/. 13,511,445.67.
-*   **Defensa Ribereña Río Cuyocuyo:** Tramo Cuyocuyo – Ura Ayllu.
-*   **Piscina Municipal en Moho:** Presupuesto S/. 3,666,648.57.
-*   **Otros proyectos:** Sistemas de riego, agua potable y saneamiento en diversas comunidades de Puno (9 de Octubre, Huancasayani, Santa Cruz de Mijani, etc.).
-
-**image:** Trabajadores con uniformes de seguridad (naranja y chalecos reflectantes) supervisando una obra de infraestructura civil con muros de concreto.
-**image:** Vista aérea de una plaza en construcción en una zona montañosa, con senderos definidos y materiales protegidos por toldos azules.
+**image:** (Camión volquete marca Volvo, color blanco, en una zona de trabajo).
+**image:** (Excavadora hidráulica Caterpillar realizando movimientos de tierra en terreno árido).
+**image:** (Camioneta Toyota Hilux blanca con logotipos laterales estacionada en una cochera).
+**image:** (Gráfico ascendente con monedas apiladas y edificios de cristal, representando la solidez financiera).
 
 ---
 
-### 9. Empresa Asociada: GECSA INGENIEROS S.A.C.
-*   **Creación:** 19 de mayo de 2021.
-*   **Registro:** Inscrita en Registros Públicos con Partida Electrónica N° 1124165.
-*   **Objetivo:** Consultoría y ejecución de obras civiles, ambientales, mineras y elaboración de expedientes técnicos.
+### 7. Empresas Asociadas
+*   **R & SOTO CONTRATISTAS GENERALES S.R.L.:** Creada el 02 de enero de 2012. Especialista en obras civiles, saneamiento y expedientes técnicos. Inscrita en Registros Públicos con Partida N° 11103963. Posee registro en la OSCE como proveedor de bienes, servicios, ejecutor de obras (capacidad de S/. 7,211,871.25) y consultor.
+*   **GECSA INGENIEROS S.A.C.:** Creada el 19 de mayo de 2021. Enfocada en ejecución y consultoría de obras ambientales, mineras y civiles.
+
+**image:** (Constancia de inscripción del RNP - OSCE para R & SOTO Contratistas, detallando su capacidad máxima de contratación).
+
+---
+
+### 8. Experiencia Documentada (Proyectos Seleccionados)
+**Obras Ejecutadas y Supervisadas:**
+1.  **Agua Potable y UBS (Cusco):** Localidad de Huintoccoyo, Chumbivilcas. Monto: S/. 2,714,566.99.
+2.  **Servicios Deportivos (Cusco):** Comunidad de Ccahuaya, Alto Pichigua, Espinar. Monto: S/. 1,466,411.07.
+3.  **Saneamiento (Puno):** Zona Centro A y B del distrito de Putina. Montos: S/. 10,354,800.65 y S/. 5,465,603.61 respectivamente.
+4.  **Agua Potable Cuyocuyo y Ura Ayllu (Puno):** Presupuesto: S/. 13,511,445.67.
+5.  **Piscina Municipal en Moho (Puno):** Presupuesto: S/. 3,666,648.57.
+6.  **Defensa Ribereña (Puno):** Río Cuyocuyo y Río Oriental.
+7. 1. Entidades Gubernamentales (Municipalidades)
+Gran parte de la experiencia documentada del consorcio proviene de trabajos realizados para diversas municipalidades:
+Municipalidad Provincial de Moho: Cliente en proyectos de supervisión de sistemas de agua potable y creación de la piscina municipal
+.
+Municipalidad Provincial de San Antonio de Putina: Cliente en proyectos de supervisión de servicios de agua potable en el centro poblado de San Isidro
+.
+Municipalidad Distrital de Challhuahuacho: Cliente para la supervisión de obras de saneamiento rural en la comunidad de Suytuyo (Apurímac)
+.
+Municipalidad Distrital de Ituata: Cliente en la ejecución de la Plaza Cívica en el centro poblado de Tambillo
+.
+Municipalidad Distrital de Santo Tomas: Cliente en la supervisión de servicios de saneamiento básico en Chumbivilcas (Cusco)
+.
+2. Empresas Privadas
+En la sección titulada "Nuestros Clientes", se muestran logotipos de empresas del sector privado, entre las que destacan:
+CyM VIZCARRA S.A.C.
+HV GROUP
+3. Compromiso con el Cliente
+Más allá de la lista de nombres, las fuentes describen la relación que el consorcio busca mantener con ellos:
+Satisfacción y Resultados: Orientan el esfuerzo del personal hacia el logro de resultados que satisfagan plenamente al cliente
+.
+Actitud de Servicio: Declaran brindar un apoyo total y compromiso en la consecución de los objetivos de sus clientes a través de un trato personalizado
+.
+Entrega Oportuna: El compromiso central es la entrega de obras con la mayor calidad y en los plazos previstos, definiendo esto como el "sello" de la empresa
+.
+Garantía Financiera: Su solidez económica les permite ofrecer a los clientes garantías de cumplimiento en proyectos de gran envergadura
+.
+
+**image:** (Serie de fotos de la obra en Huintoccoyo mostrando personal con uniformes naranja trabajando en cimentaciones de concreto para saneamiento).
+**image:** (Fotos de la construcción del centro deportivo en Espinar, incluyendo una vista final de una cancha de grass sintético bajo techo metálico curvo).
+**image:** (Camión volquete descargando material de construcción y trabajadores en una ceremonia de inicio de obra con una estación total).

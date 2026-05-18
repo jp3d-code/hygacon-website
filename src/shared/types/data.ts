@@ -99,3 +99,19 @@ export type AssociatedCompany = {
   registration: string;
   purpose: string;
 };
+
+export type ClientItem = {
+  name: string;
+};
+
+export type ClientGroup = {
+  id: string;
+  title: string;
+  description?: string;
+  items: ClientItem[];
+};
+
+export type ClientCommitment = {
+  title: string;
+  description: string;
+};

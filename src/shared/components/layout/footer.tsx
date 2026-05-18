@@ -47,6 +47,7 @@ export function Footer() {
             {[
               routes.organizacion,
               routes.servicios,
+              routes.clientes,
               routes.atencion,
               routes.contacto,
             ].map((route) => (

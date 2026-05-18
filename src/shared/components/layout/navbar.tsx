@@ -10,7 +10,12 @@ import {
 import { routes } from "@/shared/config/routes";
 import socialNetworks from "@/shared/data/social-networks";
 
-const navItems = [routes.organizacion, routes.servicios, routes.atencion];
+const navItems = [
+  routes.organizacion,
+  routes.servicios,
+  routes.clientes,
+  routes.atencion,
+];
 
 function HeaderDesktop() {
   return (
@@ -102,7 +107,7 @@ function HeaderMobile() {
 
 export function Navbar() {
   return (
-    <header className="my-5 w-full px-4">
+    <header className="sticky top-0 z-30 w-full border-zinc-500/20 border-b bg-background px-4 py-4">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
         <Link
           href={routes.path}
