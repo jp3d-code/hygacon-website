@@ -90,18 +90,21 @@ export const images = {
   },
   "677bc326": {
     name: "677bc326-1212-447e-89ba-9d73177a18d4.webp",
-    description: "Vista panorámica de obra vial con maquinaria en operación.",
-    alt: "Obra vial con maquinaria en operación",
+    description:
+      "Logotipo corporativo de 'CONSORCIO HYGACON' sobre un fondo gris oscuro texturizado, con un isotipo de edificaciones amarillas y una grúa.",
+    alt: "Logotipo de Consorcio Hygacon con diseño de construcción e ingeniería",
   },
   "66fa2131": {
     name: "66fa2131-63f6-4a5f-8897-6477f315377f.webp",
-    description: "Detalle de señalización de seguridad y control de obra.",
-    alt: "Señalización de seguridad en obra",
+    description:
+      "Dos ingenieros o técnicos conversando a un lado de una carretera afirmada en una zona rural andina.",
+    alt: "Personal técnico con chalecos de seguridad coordinando en campo abierto",
   },
   "43dd6fd4": {
     name: "43dd6fd4-5ffd-45fe-8dc3-73ca7419be09.webp",
-    description: "Campamento operativo con zonas de descanso y logística.",
-    alt: "Campamento operativo de obra",
+    description:
+      "Un supervisor posando frente a la construcción de muros de ladrillo y columnas de concreto armado en un entorno despejado.",
+    alt: "Ingeniero civil en una obra de edificación con muros de ladrillo caravista en proceso",
   },
   "3dc1735e": {
     name: "3dc1735e-e03c-4ae0-abaa-3ca7191bc88d.webp",
@@ -110,28 +113,51 @@ export const images = {
   },
   "3cdce100": {
     name: "3cdce100-1ca2-4258-96a7-dca5aa7d9a56.webp",
-    description: "Planos y herramientas de ingeniería sobre mesa de trabajo.",
-    alt: "Planos y herramientas de ingeniería",
+    description:
+      "Estructura de soporte de ingeniería fabricada con vigas y columnas de acero pesado negro, equipada con una escalera de gato lateral.",
+    alt: "Estructura metálica industrial de gran envergadura con arriostramientos",
   },
   "39c03d38": {
     name: "39c03d38-23a0-4b2a-95c1-7805abf2dc43.webp",
-    description: "Equipo técnico revisando avance de obra en campo.",
-    alt: "Equipo técnico revisando avance de obra",
+    description:
+      "Plataforma industrial interior con escaleras y barandas de seguridad pintadas de color amarillo brillante para prevención de riesgos.",
+    alt: "Pasarela y escaleras de seguridad industrial con barandillas amarillas en una planta",
   },
   "3314858f": {
     name: "3314858f-ae50-4b4a-874a-589d31e88f29.webp",
-    description: "Certificación de gestión antisoborno.",
-    alt: "Certificación ISO 37001",
+    description:
+      "Grupo de ingenieros inspeccionando un sistema de canales, pozas de sedimentación o cámaras de concreto en una zona con vegetación.",
+    alt: "Personal técnico sobre una estructura hidráulica de concreto",
   },
   "2eaa3a79": {
     name: "2eaa3a79-acb3-4db4-bb29-eb0b363b579a.webp",
-    description: "Trabajos de soldadura y montaje metalmecánico.",
-    alt: "Soldadura y montaje metalmecánico",
+    description:
+      "Fotografía grupal de autoridades, ingenieros y comuneros locales frente a un módulo de vivienda o administrativo de ladrillo en construcción.",
+    alt: "Reunión e inspección de obra civil con comuneros y técnicos en la sierra",
   },
   "2638d80e": {
     name: "2638d80e-30e2-41ad-a469-116ecd0f92f0.webp",
-    description: "Equipo de topografía con instrumentos de medición.",
-    alt: "Instrumentos de topografía en obra",
+    description:
+      "Vista interior de un complejo deportivo techado (coliseo o picadero) con césped sintético verde y estructura de arco parabólico.",
+    alt: "Cancha de fútbol sala con grass sintético bajo una cobertura metálica parabólica",
+  },
+  "0384e667": {
+    name: "0384e667-5774-41db-94d1-dafe250c010e.webp",
+    description:
+      "Tres profesionales posando al lado de una maquinaria pesada de excavación (retroexcavadora amarilla) en un entorno urbano o rural.",
+    alt: "Personal de ingeniería junto a una retroexcavadora en zona de movimiento de tierras",
+  },
+  "01c01b59": {
+    name: "01c01b59-539b-4fbd-9493-494940346227.webp",
+    description:
+      "Fachada exterior de una nave u planta industrial de concreto con portones de metal enrollables y sistemas de tuberías aéreas.",
+    alt: "Vista externa de almacén o planta de producción con grandes portones grises",
+  },
+  "0d89cb9d": {
+    name: "0d89cb9d-cf88-4ecb-84f7-7a727c2ec26c.webp",
+    description:
+      "Un monumento moderno o escultura urbana colorida hecha de bloques geométricos decorada con globos, ubicada en una plaza pública inaugurada.",
+    alt: "Estructura artística central en un espacio público o plaza pavimentada",
   },
   iso9001: {
     name: "iso9001.webp",
