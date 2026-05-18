@@ -21,7 +21,7 @@ const data = [
     icon: Users,
     name: "Colaboradores",
     description:
-      "¿Formas parte del equipo HLC y necesitas reportar algo o gestionar una solicitud interna? Usa el canal exclusivo para colaboradores.",
+      "¿Formas parte del equipo HYGACON y necesitas reportar algo o gestionar una solicitud interna? Usa el canal exclusivo para colaboradores.",
     link: "https://forms.office.com/r/SbjuZMUqTn",
   },
 ];

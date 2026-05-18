@@ -4,7 +4,6 @@ export type Service = {
   icon: LucideIcon;
   name: string;
   image: string;
-  brochure: string;
   excerpt: string;
   description: string;
   categories: {
@@ -30,12 +29,6 @@ export type Statistic = {
   prefix?: string;
   number: number;
   suffix?: string;
-};
-
-export type OrgStatistic = {
-  num: number;
-  label: string;
-  desc: string;
 };
 
 export type SocialNetwork = {
@@ -98,4 +91,11 @@ export type Image = {
   name: string;
   alt: string;
   description: string;
+};
+
+export type AssociatedCompany = {
+  name: string;
+  createdAt: string;
+  registration: string;
+  purpose: string;
 };

@@ -69,9 +69,9 @@ function HeaderMobile() {
       <SheetContent side="right" className="w-72 py-10">
         <Link
           href={routes.path}
-          className="flex w-full items-center justify-center p-6 font-semibold text-xl uppercase"
+          className="flex w-full items-center justify-center p-6 font-condensed font-semibold text-xl uppercase"
         >
-          KW
+          HYGACON
         </Link>
         <nav className="flex h-full flex-col items-center gap-3 p-4 font-medium">
           {navItems.map((route) => (
@@ -104,8 +104,11 @@ export function Navbar() {
   return (
     <header className="my-5 w-full px-4">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
-        <Link href={routes.path} className="font-semibold text-sm uppercase">
-          KW
+        <Link
+          href={routes.path}
+          className="font-bold font-condensed text-3xl uppercase"
+        >
+          HYGACON
         </Link>
         <HeaderDesktop />
         <HeaderMobile />

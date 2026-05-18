@@ -22,7 +22,7 @@ export function Services() {
             entrega del proyecto.
           </SectionDescription>
         </SectionHeader>
-        <div className="grid w-full items-start justify-center gap-6 lg:grid-cols-4">
+        <div className="grid w-full items-start justify-center gap-6 lg:grid-cols-3">
           {services.map((service) => (
             <div
               key={service.name}

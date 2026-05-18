@@ -21,7 +21,7 @@ export function TeamSection() {
     <Section>
       <Container>
         <SectionHeader>
-          <SectionOverline>Las personas detrás de HLC</SectionOverline>
+          <SectionOverline>Las personas detrás de HYGACON</SectionOverline>
           <SectionTitle first="Nuestro" second="Equipo" />
         </SectionHeader>
 

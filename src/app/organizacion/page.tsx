@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AboutSection } from "@/modules/organizacion/components/about-section";
+import { AssociatedCompaniesSection } from "@/modules/organizacion/components/associated-companies-section";
 import { CorporateValuesSection } from "@/modules/organizacion/components/corporate-values-section";
 import { HistorySection } from "@/modules/organizacion/components/history-section";
 import { IdentitySection } from "@/modules/organizacion/components/identity-section";
@@ -25,6 +26,7 @@ export default function OrganizacionPage() {
       <OrgStatistics />
       <TeamSection />
       <CorporateValuesSection />
+      <AssociatedCompaniesSection />
       <ManagementSystemSection />
     </>
   );

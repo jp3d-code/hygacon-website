@@ -2,39 +2,39 @@ import type { HistoryEvent } from "@/shared/types/data";
 
 export const historyEvents: HistoryEvent[] = [
   {
-    year: "2000",
+    year: "2012",
     title: "FUNDACIÓN",
     description:
-      "El Ing. Manuel Ortega Rubin funda Heap Leaching Consulting en Lima, Perú, con enfoque en soluciones para el tratamiento de minerales preciosos.",
-  },
-  {
-    year: "2005",
-    title: "EXPANSIÓN DE SERVICIOS",
-    description:
-      "La empresa amplía su portafolio hacia ingeniería civil y construcción de infraestructura minera, consolidando su presencia nacional.",
-  },
-  {
-    year: "2010",
-    title: "PLANTA DE FABRICACIÓN",
-    description:
-      "Inauguramos nuestra planta de fabricaciones metalmecánicas en el distrito de Lurigancho-Chosica, Lima, con tecnología de última generación.",
+      "Se constituye Consorcio HYGACON en Arequipa para ejecutar obras de saneamiento e infraestructura local.",
   },
   {
     year: "2015",
-    title: "CERTIFICACIONES ISO",
+    title: "PRIMERAS OBRAS",
     description:
-      "Obtención de las certificaciones ISO 9001 e ISO 45001, reafirmando nuestro compromiso con la calidad y la seguridad.",
+      "Se ejecutan proyectos de agua potable y defensas ribereñas en comunidades altoandinas.",
   },
   {
     year: "2018",
-    title: "REBRANDING HLC",
+    title: "CARTERA MULTISECTOR",
     description:
-      "La empresa se transforma en HLC Ingeniería y Construcción S.A.C., reflejando su evolución y diversificación de servicios.",
+      "Se amplían servicios a electromecánica, telecomunicaciones y metalmecánica para obras integrales.",
+  },
+  {
+    year: "2021",
+    title: "CERTIFICACIONES",
+    description:
+      "Se fortalece el sistema de gestión con certificaciones ISO 9001, 14001, 45001 y 37001.",
+  },
+  {
+    year: "2023",
+    title: "CAPACIDAD OPERATIVA",
+    description:
+      "Se consolida una flota de maquinaria pesada y equipos menores para obras de gran envergadura.",
   },
   {
     year: "2025",
-    title: "25 AÑOS DE EXCELENCIA",
+    title: "PROYECTOS EMBLEMÁTICOS",
     description:
-      "Celebramos 25 años de vida institucional con más de 767 proyectos, 312 clientes y una posición de liderazgo en el sector.",
+      "Ejecución de obras de saneamiento y plazas cívicas en Puno y Cusco con impacto social directo.",
   },
 ];

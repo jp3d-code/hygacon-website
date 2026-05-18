@@ -37,7 +37,7 @@ export function Counter({ finalNumber }: { finalNumber: number }) {
     if (!isInView) return;
 
     const controls = animate(count, finalNumber, {
-      duration: 5,
+      duration: 1,
       onUpdate(latest) {
         if (hasDecimals) {
           count.set(Math.round(latest / step) * step);

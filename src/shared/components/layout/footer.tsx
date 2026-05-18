@@ -19,11 +19,11 @@ export function Footer() {
             href={routes.path}
             className="font-semibold text-4xl text-secondary-foreground uppercase"
           >
-            KW
+            HYGACON
           </Link>
           <p className="text-slate-300 text-sm leading-relaxed">
-            Empresa de ingeniería y construcción líder en proyectos y contratos
-            EPC. 25 años de excelencia al servicio del Perú.
+            Empresa de ingeniería y construcción con foco en saneamiento,
+            infraestructura y servicios generales.
           </p>
           <div className="flex gap-4">
             {socialNetworks.map((socialNetwork) => (
@@ -93,19 +93,16 @@ export function Footer() {
                 <p className="mb-1 font-bold text-slate-100 text-xs uppercase">
                   Oficina Principal
                 </p>
-                <p>
-                  Av. Manuel Olguín 335, Edificio Link Tower, Piso 17, Santiago
-                  de Surco, Lima
-                </p>
+                <p>Av. Libertad 2058, Distrito de Cocachacra, Arequipa.</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <Phone className="shrink-0 text-primary" size={20} />
-              <p className="text-slate-300 text-sm">(511) 712 - 4900</p>
+              <p className="text-slate-300 text-sm">974628766</p>
             </div>
             <div className="flex items-center gap-3">
               <Mail className="shrink-0 text-primary" size={20} />
-              <p className="text-slate-300 text-sm">proyectos@hlcsac.com</p>
+              <p className="text-slate-300 text-sm">hygaconperu@gmail.com</p>
             </div>
           </div>
         </div>
@@ -117,8 +114,7 @@ export function Footer() {
         className="flex flex-col items-center justify-between gap-4 md:flex-row"
       >
         <p className="text-center text-slate-400 text-xs md:text-left">
-          © {currentYear} HLC Ingeniería y Construcción S.A.C. Todos los
-          derechos reservados.
+          © {currentYear} Consorcio HYGACON. Todos los derechos reservados.
         </p>
         <div className="flex gap-6 text-slate-400 text-xs">
           <Link href="#" className="transition-colors hover:text-white">

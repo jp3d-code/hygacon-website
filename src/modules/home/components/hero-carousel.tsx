@@ -2,52 +2,51 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
-import { Button } from "@/shared/components/ui/button";
-import { Section } from "@/shared/components/ui/section";
 import {
   heroContentVariants,
   heroItemVariants,
   heroTitleVariants,
 } from "@/modules/home/animations/hero-stagger";
+import { Button } from "@/shared/components/ui/button";
+import { Section } from "@/shared/components/ui/section";
+import { imageSrc, images } from "@/shared/data/images";
 import { cn } from "@/shared/lib/utils";
 
 const slides = [
   {
     id: 1,
-    title: "ESPECIALISTAS EN EPC PARA",
-    highlight: "TALLERES",
-    subtitle: "DE MANTENIMIENTO",
-    image:
-      "https://ynoa-uploader.ynoacamino.me/uploads/1778253705_photo-1504307651254-35680f356dfd.webp",
+    title: "CONSORCIO HYGACON",
+    highlight: "INFRAESTRUCTURA",
+    subtitle: "Y SANEAMIENTO",
+    image: imageSrc(images.f6547048),
   },
   {
     id: 2,
-    title: "SOLUCIONES PARA",
-    highlight: "MINERÍA",
-    subtitle: "E INDUSTRIA PESADA",
-    image:
-      "https://ynoa-uploader.ynoacamino.me/uploads/1778253766_photo-1513828583688-c52646db42da.webp",
+    title: "EJECUCION Y",
+    highlight: "SUPERVISION",
+    subtitle: "DE OBRAS",
+    image: imageSrc(images.d145c549),
   },
   {
     id: 3,
-    title: "INFRAESTRUCTURA",
-    highlight: "INDUSTRIAL",
-    subtitle: "A GRAN ESCALA",
-    image:
-      "https://ynoa-uploader.ynoacamino.me/uploads/1778253810_photo-1509395176047-4a66953fd231.webp",
+    title: "SERVICIOS",
+    highlight: "INTEGRALES",
+    subtitle: "DE CONSTRUCCION",
+    image: imageSrc(images.eff50fdf),
   },
 ];
 
 export default function HeroCarousel() {
   const [index, setIndex] = useState(0);
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: We want this effect to run only when the index changes, not on every render.
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [index]);
 
   const currentSlide = slides[index];
 

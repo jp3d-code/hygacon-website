@@ -14,7 +14,7 @@ export function HistorySection() {
       <Container>
         <SectionHeader>
           <SectionOverline>Nuestra trayectoria</SectionOverline>
-          <SectionTitle first="Historia de" second="HLC" />
+          <SectionTitle first="Historia de" second="HYGACON" />
         </SectionHeader>
 
         {/* Timeline wrapper */}

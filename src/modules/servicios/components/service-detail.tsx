@@ -90,17 +90,6 @@ export function ServiceDetail({ service, index }: Props) {
               >
                 Solicitar cotización
               </LinkBtm>
-
-              <div className="service-brochure flex items-center gap-3">
-                <img
-                  src={service.brochure}
-                  alt={`Brochure ${service.name}`}
-                  className="h-16 w-16 object-contain"
-                />
-                <span className="text-muted-foreground text-sm">
-                  Brochure {service.name}
-                </span>
-              </div>
             </div>
           </div>
         </div>

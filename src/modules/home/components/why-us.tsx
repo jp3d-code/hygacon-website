@@ -14,7 +14,7 @@ export function WhyUs() {
       <Container>
         <SectionHeader>
           <SectionOverline>Nuestros Valores</SectionOverline>
-          <SectionTitle first="¿POR QUÉ" second="HLC?" />
+          <SectionTitle first="¿POR QUÉ" second="HYGACON?" />
           <SectionDescription>
             Factores que nos diferencian y nos han permitido consolidarnos como
             líderes del sector.

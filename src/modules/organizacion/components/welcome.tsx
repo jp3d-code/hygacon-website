@@ -7,14 +7,15 @@ import {
   SectionTitle,
 } from "@/shared/components/ui/section";
 import { routes } from "@/shared/config/routes";
+import { imageSrc, images } from "@/shared/data/images";
 
 export function WelcomeSection() {
   return (
     <Section className="bg-secondary">
       <Container className="grid gap-12 md:grid-cols-2 md:items-center md:gap-16">
         <img
-          src="https://www.hlcsac.com/images/manuel-ortega-retoque.jpg"
-          alt="25 Años construyendo el Perú"
+          src={imageSrc(images.be7c55a2)}
+          alt="Consorcio HYGACON en obra"
           className="aspect-square w-full rounded-xl object-cover object-3/4 object-top"
         />
 
@@ -23,25 +24,22 @@ export function WelcomeSection() {
           <SectionHeader className="items-start">
             <SectionOverline>Quiénes somos</SectionOverline>
             <SectionTitle
-              first="25 Años construyendo"
-              second="el Perú"
+              first="Consorcio"
+              second="HYGACON"
               className="justify-start text-secondary-foreground"
             />
           </SectionHeader>
 
           <p className="text-muted text-sm leading-relaxed">
-            Más de 20 años desarrollando proyectos en el Perú y en el
-            extranjero. Líderes brindando soluciones en Ingeniería, Fabricación,
-            Procura y Construcción en la ejecución de Proyectos EPC y en Pruebas
-            Metalúrgicas.
+            Ejecutamos proyectos de ingeniería, saneamiento y servicios
+            generales con enfoque en seguridad, medio ambiente y responsabilidad
+            social.
           </p>
 
           <p className="text-muted text-sm leading-relaxed">
-            Personal altamente capacitado y motivado en la realización de sus
-            funciones Comprometidos a desarrollar actividades de manera
-            eficiente, eficaz, oportuna y confiable Trabajo en equipo y calidad
-            como modelo de excelencia que nos hace una marca líder +2.6 Millones
-            de horas hombre trabajadas con factor de accidentabilidad de 0.058
+            Contamos con equipos multidisciplinarios, maquinaria propia y una
+            cultura de trabajo colaborativo que asegura cumplimiento y calidad
+            en cada obra.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-2">

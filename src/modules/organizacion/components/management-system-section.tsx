@@ -5,6 +5,7 @@ import {
   SectionOverline,
   SectionTitle,
 } from "@/shared/components/ui/section";
+import { imageSrc, images } from "@/shared/data/images";
 import { managementSystem } from "@/shared/data/management-system";
 
 export function ManagementSystemSection() {
@@ -13,8 +14,7 @@ export function ManagementSystemSection() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage:
-            "url('https://www.hlcsac.com/images/sig-policy.jpg')",
+          backgroundImage: `url('${imageSrc(images["43dd6fd4"])}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -26,7 +26,7 @@ export function ManagementSystemSection() {
       <Container className="relative z-10 gap-12">
         <SectionHeader>
           <SectionOverline className="text-primary">
-            Sistema Integrado de Gestión — Versión: 05 · Lima, 13 de Mayo de
+            Sistema Integrado de Gestión — Versión: 03 · Arequipa, 15 de Mayo de
             2025
           </SectionOverline>
           <SectionTitle

@@ -7,14 +7,15 @@ import {
   SectionTitle,
 } from "@/shared/components/ui/section";
 import { routes } from "@/shared/config/routes";
+import { imageSrc, images } from "@/shared/data/images";
 
 export function AboutSection() {
   return (
     <Section>
       <Container className="grid gap-12 md:grid-cols-2 md:items-center md:gap-16">
         <img
-          src="https://www.hlcsac.com/images/quienes-somos.jpg"
-          alt="25 Años construyendo el Perú"
+          src={imageSrc(images.c25d5735)}
+          alt="Trabajo en equipo en obra"
           className="w-full rounded-xl object-cover"
         />
 
@@ -23,31 +24,22 @@ export function AboutSection() {
           <SectionHeader className="items-start">
             <SectionOverline>Quiénes somos</SectionOverline>
             <SectionTitle
-              first="25 Años construyendo"
-              second="el Perú"
+              first="Experiencia"
+              second="comprobada"
               className="justify-start"
             />
           </SectionHeader>
 
           <p className="text-muted-foreground text-sm leading-relaxed">
-            En el año 2000, el Ing. Manuel Ortega Rubín decide emprender en el
-            proyecto más importante de vida y fundó la empresa HLC. Actualmente,
-            es la empresa peruana que brinda soluciones integrales a sus
-            clientes abarcando Estudios Metalúrgicos, Desarrollo de Estudios e
-            Ingeniería, Suministro y Fabricación de Estructuras Metalmecánicas,
-            así como Equipos Especiales, Construcción y Puesta en Marcha para
-            Proyectos Tipo EPC, para los sectores minero-metalúrgicos, oil &amp;
-            gas e industrial. HLC cuenta con oficinas comerciales en Chile,
-            Bolivia y Ecuador.
+            Consorcio HYGACON brinda soluciones integrales en ingeniería,
+            metalmecánica y servicios generales, ejecutando proyectos de
+            infraestructura y saneamiento para entidades públicas y privadas.
           </p>
 
           <p className="text-muted-foreground text-sm leading-relaxed">
-            Uno de los principales valores de HLC es la Confianza Depositada de
-            nuestros Clientes. Es por ello que a la fecha hemos diseñado y
-            ejecutado más de 10 plantas hidrometalúrgicas, 07 plantas de
-            tratamiento de aguas, 06 talleres de mantenimiento de camiones,
-            entre otros. Lo más importante en HLC es su capital humano, en el
-            cual cuenta la experiencia, prestigio y compromiso.
+            Nuestra fortaleza es el capital humano y la capacidad operativa que
+            nos permite entregar obras seguras, eficientes y con alto impacto
+            social en el sur del país.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-2">

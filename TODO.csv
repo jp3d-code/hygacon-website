@@ -1,0 +1,41 @@
+TYPE,CONTENT,DESCRIPTION,IS_COLLAPSED,PRIORITY,INDENT,AUTHOR,RESPONSIBLE,DATE,DATE_LANG,TIMEZONE,DURATION,DURATION_UNIT,DEADLINE,DEADLINE_LANG
+meta,view_style=board,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+section,TODO,,False,,,,,,,,,,,
+task,SERVICIOS - Categorizar servicios,"Categorías iniciales
+Minería
+Construcción Civil
+Saneamiento
+Metalmecánica
+Maquinaria",,4,1,Elza (38326176),,,,America/Lima,,,,
+task,SERVICIOS - Mostrar descripción técnica,,,4,1,Elza (38326176),,,,America/Lima,,,,
+task,SERVICIOS - Mostrar imágenes referenciales,,,4,1,Elza (38326176),,,,America/Lima,,,,
+task,SERVICIOS - Filtrar por sector,,,4,1,Elza (38326176),,,,America/Lima,,,,
+task,SECTORES - Mostrar sectores donde opera,,,4,1,Elza (38326176),,,,America/Lima,,,,
+task,SECTORES - Relación visual con proyectos,,,4,1,Elza (38326176),,,,America/Lima,,,,
+task,SECTORES - Información institucional por sector,"Sectores
+Minería
+Construcción
+Medio Ambiente
+Saneamiento",,4,1,Elza (38326176),,,,America/Lima,,,,
+task,PROYECTOS - Base de datos de proyectos,,,4,1,Elza (38326176),,,,America/Lima,,,,
+task,PROYECTOS - Panel administrable,"Filtro por:
+sector
+región
+estado
+cliente",,4,1,Elza (38326176),,,,America/Lima,,,,
+task,CLIENTES - Mostrar logos de clientes,"Categorizar:
+minería
+estado
+privado
+Datos requeridos
+Logos oficiales
+Lista validada",,4,1,Elza (38326176),,,,America/Lima,,,,
+,,,,,,,,,,,,,,
+section,DOING,,False,,,,,,,,,,,
+section,DONE,,False,,,,,,,,,,,
+task,ORGANIZACIÓN - Mostrar historia de la empresa,,,4,1,Elza (38326176),,,,America/Lima,,,,
+task,"ORGANIZACIÓN - Mostrar misión, visión y valores",,,4,1,Elza (38326176),,,,America/Lima,,,,
+task,ORGANIZACIÓN - Mostrar organigrama o plana gerencial,,,4,1,Elza (38326176),,,,America/Lima,,,,
+task,ORGANIZACIÓN - Mostrar empresas asociadas,,,4,1,Elza (38326176),,,,America/Lima,,,,
+task,ORGANIZACIÓN - Mostrar certificaciones ISO,,,4,1,Elza (38326176),,,,America/Lima,,,,

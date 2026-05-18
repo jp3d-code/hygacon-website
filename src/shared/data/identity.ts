@@ -7,14 +7,14 @@ export const identity: IdentityItem[] = [
     title: "Misión",
     icon: Target,
     content:
-      "Brindar una gestión innovadora con estándares óptimos de calidad, manejo de riesgos, seguridad, salud en el trabajo, cuidado del medio ambiente, responsabilidad social y conducta ética empresarial en consultoría metalúrgica, ingeniería, construcción y gerenciamiento de proyectos, que nos permita generar mayor valor y satisfacción a nuestros clientes y otros grupos de interés.",
+      "Ejecutar proyectos buscando la mejora continua en cada proceso, generando valor para los clientes con altos estándares de seguridad, medio ambiente y responsabilidad social, manteniéndose a la vanguardia tecnológica.",
   },
   {
     id: "vision",
     title: "Visión",
     icon: Eye,
     content:
-      "Ser una empresa líder nacional e internacional en consultoría metalúrgica, ingeniería, construcción y gerenciamiento de proyectos para los sectores minero-metalúrgico, oil & gas, infraestructura, energía y saneamiento.",
+      "Ser el consorcio líder a nivel nacional en soluciones empresariales de construcción, minería y medio ambiente.",
   },
   {
     id: "valores",
@@ -22,11 +22,12 @@ export const identity: IdentityItem[] = [
     icon: ShieldCheck,
     // Los guardamos como lista por si quieres mapearlos en "pills" o bullet points
     items: [
-      "Innovación",
       "Compromiso",
-      "Excelencia",
-      "Integridad",
-      "Seguridad y Salud",
+      "Respeto",
+      "Confianza",
+      "Trabajo en Equipo",
+      "Actitud de Servicio",
+      "Eficiencia",
     ],
   },
 ];

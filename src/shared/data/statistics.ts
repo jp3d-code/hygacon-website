@@ -2,22 +2,24 @@ import type { Statistic } from "@/shared/types/data";
 
 const statistics: Statistic[] = [
   {
-    name: "Proyectos",
-    number: 767,
-  },
-  {
-    name: "Horas hombre",
-    prefix: "+",
-    number: 12.5,
+    name: "Inversion referencial",
+    number: 25.1,
     suffix: "M",
   },
   {
-    name: "Partners",
-    number: 106,
+    name: "Presupuesto mayor",
+    number: 13.5,
+    suffix: "M",
   },
   {
-    name: "Clientes",
-    number: 302,
+    name: "Certificaciones ISO",
+    prefix: "+",
+    number: 5,
+  },
+  {
+    name: "Flota operativa",
+    prefix: "+",
+    number: 28,
   },
 ];
 

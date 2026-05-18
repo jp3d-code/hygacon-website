@@ -1,49 +1,47 @@
 import {
   CheckCircle,
-  Medal,
-  Paperclip,
+  Droplets,
+  Handshake,
   Shield,
-  Star,
   Users,
+  Zap,
 } from "lucide-react";
 import type { Value } from "@/shared/types/data";
 
 const values: Value[] = [
   {
-    icon: Star,
-    name: "Tecnología BIM",
-    description:
-      "Especialistas en el desarrollo de Proyectos BIM, un valor agregado que diferencia y optimiza cada proyecto.",
-  },
-  {
     icon: Shield,
     name: "Seguridad",
     description:
-      "Promovemos una cultura donde prima la seguridad, la salud y el cuidado del medio ambiente en cada operación.",
-  },
-  {
-    icon: CheckCircle,
-    name: "Calidad",
-    description:
-      "Gestión innovadora con los materiales más selectos y procesos certificados ISO 9001 e ISO 45001.",
-  },
-  {
-    icon: Paperclip,
-    name: "767 Proyectos",
-    description:
-      "Más de 767 proyectos culminados satisfactoriamente con 0 accidentes mortales. Un récord que refleja nuestra disciplina.",
+      "Garantía de seguridad para el personal, equipos y procesos en cada proyecto.",
   },
   {
     icon: Users,
-    name: "Equipo Profesional",
+    name: "Trabajo en Equipo",
     description:
-      "Personal altamente capacitado y motivado, buscando siempre soluciones que conlleven al éxito del proyecto.",
+      "Metodología colaborativa para lograr mejores resultados en campo.",
   },
   {
-    icon: Medal,
-    name: "Certificaciones",
+    icon: Handshake,
+    name: "Confianza",
     description:
-      "Contamos con las certificaciones ISO 9001 e ISO 45001 en materia de seguridad y calidad del servicio.",
+      "Relaciones basadas en la consideración personal y profesional.",
+  },
+  {
+    icon: Zap,
+    name: "Eficiencia",
+    description: "Optimización de recursos para cumplir con lo solicitado.",
+  },
+  {
+    icon: CheckCircle,
+    name: "Compromiso",
+    description:
+      "Orientación al trabajo bien realizado y satisfacción del cliente.",
+  },
+  {
+    icon: Droplets,
+    name: "Cuidado Ambiental",
+    description: "Prevención de impactos y cuidado del medio ambiente en obra.",
   },
 ];
 

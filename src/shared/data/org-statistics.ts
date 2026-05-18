@@ -1,25 +1,25 @@
-import type { OrgStatistic } from "@/shared/types/data";
+import type { Statistic } from "@/shared/types/data";
 
-const orgStatistics: OrgStatistic[] = [
+const orgStatistics: Statistic[] = [
   {
-    num: 25,
-    label: "Años de experiencia",
-    desc: "Una trayectoria sólida al servicio de la industria peruana.",
+    name: "Inversion referencial",
+    number: 25.1,
+    suffix: "M",
   },
   {
-    num: 767,
-    label: "Proyectos ejecutados",
-    desc: "Con cero accidentes mortales en toda nuestra historia.",
+    name: "Presupuesto mayor",
+    number: 13.5,
+    suffix: "M",
   },
   {
-    num: 106,
-    label: "Partners estratégicos",
-    desc: "Alianzas con empresas líderes a nivel nacional e internacional.",
+    name: "Certificaciones ISO",
+    prefix: "+",
+    number: 5,
   },
   {
-    num: 312,
-    label: "Clientes satisfechos",
-    desc: "La confianza de las empresas más importantes del sector.",
+    name: "Flota operativa",
+    prefix: "+",
+    number: 28,
   },
 ];
 

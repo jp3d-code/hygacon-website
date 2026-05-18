@@ -9,22 +9,22 @@ import type { SocialNetwork } from "@/shared/types/data";
 const socialNetworks: SocialNetwork[] = [
   {
     icon: IconBrandLinkedinFilled,
-    href: "https://www.linkedin.com/company/ing-const-jp/",
+    href: "https://www.linkedin.com/company/hygacon/",
     name: "LinkedIn",
   },
   {
     icon: IconBrandFacebookFilled,
-    href: "https://www.facebook.com/ingconstjp",
+    href: "https://www.facebook.com/consorciohygacon",
     name: "Facebook",
   },
   {
     icon: IconBrandInstagram,
-    href: "https://www.instagram.com/ing_const_jp/",
+    href: "https://www.instagram.com/consorcio_hygacon/",
     name: "Instagram",
   },
   {
     icon: IconBrandYoutubeFilled,
-    href: "https://www.youtube.com/@ingconstjp",
+    href: "https://www.youtube.com/@consorciohygacon",
     name: "YouTube",
   },
 ];
