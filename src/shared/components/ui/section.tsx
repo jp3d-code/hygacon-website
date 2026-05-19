@@ -4,7 +4,6 @@ import type { HTMLMotionProps } from "motion/react";
 import { motion, useInView, useReducedMotion } from "motion/react";
 import React from "react";
 import { easeOutQuint } from "@/shared/animations/easings";
-import { revealTransition, revealVariants } from "@/shared/animations/reveal";
 import { cn } from "@/shared/lib/utils";
 
 export function Section({
@@ -31,20 +30,12 @@ export function Container({
   animation = true,
   ...props
 }: HTMLMotionProps<"div"> & { animation?: boolean }) {
-  const containerRef = React.useRef<HTMLDivElement | null>(null);
-  const isInView = useInView(containerRef, { once: true, amount: 0.26 });
-  const shouldReduceMotion = useReducedMotion();
-  const shouldAnimate = animation && !shouldReduceMotion;
-  const initialState = shouldAnimate ? "hidden" : { opacity: 1, y: 0 };
-  const animateState = shouldAnimate && isInView ? "visible" : initialState;
-
   return (
     <motion.div
-      ref={containerRef}
-      variants={revealVariants}
-      initial={initialState}
-      animate={animateState}
-      transition={shouldAnimate ? revealTransition : { duration: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      initial={animation ? { opacity: 0, scale: 0.99 } : {}}
+      viewport={{ amount: 0.2, once: true }}
+      transition={{ duration: 0.4, ease: "easeIn" }}
       className={cn(
         "flex w-full max-w-7xl flex-col items-center justify-center gap-20",
         className,

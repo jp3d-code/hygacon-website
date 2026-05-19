@@ -1,16 +1,23 @@
-import type * as React from "react";
+"use client";
 
+import { type HTMLMotionProps, motion } from "motion/react";
+import type * as React from "react";
 import { cn } from "@/shared/lib/utils";
 
 function Card({
   className,
   size = "default",
+  i,
   ...props
-}: React.ComponentProps<"div"> & { size?: "default" | "sm" }) {
+}: HTMLMotionProps<"div"> & { size?: "default" | "sm"; i?: number }) {
   return (
-    <div
+    <motion.div
       data-slot="card"
       data-size={size}
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: i ? i * 0.1 : 0 }}
+      viewport={{ amount: 0.35, once: true }}
       className={cn(
         "group/card flex flex-col gap-4 overflow-hidden rounded-xl bg-card py-4 text-card-foreground text-sm ring-1 ring-foreground/10 has-[>img:first-child]:pt-0 has-data-[slot=card-footer]:pb-0 data-[size=sm]:gap-3 data-[size=sm]:py-3 data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl",
         className,
