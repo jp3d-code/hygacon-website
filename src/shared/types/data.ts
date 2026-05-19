@@ -116,7 +116,7 @@ export type ClientCommitment = {
   description: string;
 };
 
-export type ProjectItem = {
+export type Project = {
   id: string;
   name: string;
   sector: string;

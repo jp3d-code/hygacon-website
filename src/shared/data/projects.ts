@@ -1,5 +1,5 @@
 import { imageSrc, images } from "@/shared/data/images";
-import type { ProjectItem } from "@/shared/types/data";
+import type { Project } from "@/shared/types/data";
 
 export const projectFilters = {
   sector: ["Todos", "Minería", "Oil & Gas", "Industria", "Internacional"],
@@ -14,7 +14,7 @@ export const projectFilters = {
   country: ["Todos", "Perú"],
 };
 
-export const projects: ProjectItem[] = [
+export const projects: Project[] = [
   {
     id: "planta-metalurgica-shahuindo",
     name: "Planta Metalúrgica Shahuindo",
