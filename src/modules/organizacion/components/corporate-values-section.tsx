@@ -5,11 +5,15 @@ import {
   SectionOverline,
   SectionTitle,
 } from "@/shared/components/ui/section";
+import { routes } from "@/shared/config/routes";
 import corporateValues from "@/shared/data/corporate-values";
 
 export function CorporateValuesSection() {
   return (
-    <Section className="bg-muted">
+    <Section
+      id={routes.organizacion.sections.valoresCorporativos.id}
+      className="bg-muted"
+    >
       <Container>
         <SectionHeader>
           <SectionOverline>Lo que nos guía</SectionOverline>

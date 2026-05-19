@@ -11,7 +11,10 @@ import { imageSrc, images } from "@/shared/data/images";
 
 export function WelcomeSection() {
   return (
-    <Section className="bg-secondary">
+    <Section
+      id={routes.organizacion.sections.bienvenida.id}
+      className="bg-secondary"
+    >
       <Container className="grid gap-12 md:grid-cols-2 md:items-center md:gap-16">
         <img
           src={imageSrc(images.be7c55a2)}

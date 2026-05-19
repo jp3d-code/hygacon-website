@@ -11,7 +11,7 @@ import { imageSrc, images } from "@/shared/data/images";
 
 export function AboutSection() {
   return (
-    <Section>
+    <Section id={routes.organizacion.sections.experiencia.id}>
       <Container className="grid gap-12 md:grid-cols-2 md:items-center md:gap-16">
         <img
           src={imageSrc(images.c25d5735)}

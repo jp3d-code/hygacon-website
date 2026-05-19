@@ -18,14 +18,15 @@ type ServiceDetailType = Omit<ServiceType, "icon">;
 type Props = {
   service: ServiceDetailType;
   index: number;
+  sectionId?: string;
 };
 
-export function ServiceDetail({ service, index }: Props) {
+export function ServiceDetail({ service, index, sectionId }: Props) {
   const [activeTab, setActiveTab] = useState(0);
   const reverse = index % 2 === 1;
 
   return (
-    <Section className={reverse ? "bg-muted" : ""}>
+    <Section id={sectionId} className={reverse ? "bg-muted" : ""}>
       <Container>
         <div
           className={cn("grid items-center gap-20 md:grid-cols-2", {

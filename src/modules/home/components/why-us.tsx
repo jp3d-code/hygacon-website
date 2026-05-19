@@ -6,11 +6,12 @@ import {
   SectionOverline,
   SectionTitle,
 } from "@/shared/components/ui/section";
-import values from "@/shared/data/values"; // Asumiendo que guardaste el array ahí
+import { routes } from "@/shared/config/routes";
+import values from "@/shared/data/values";
 
 export function WhyUs() {
   return (
-    <Section>
+    <Section id={routes.home.sections.valores.id}>
       <Container>
         <SectionHeader>
           <SectionOverline>Nuestros Valores</SectionOverline>

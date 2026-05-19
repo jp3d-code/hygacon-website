@@ -8,11 +8,12 @@ import {
   SectionOverline,
   SectionTitle,
 } from "@/shared/components/ui/section";
+import { routes } from "@/shared/config/routes";
 import services from "@/shared/data/services";
 
 export function Services() {
   return (
-    <Section className="bg-muted">
+    <Section id={routes.home.sections.servicios.id} className="bg-muted">
       <Container>
         <SectionHeader>
           <SectionOverline>Lo que hacemos</SectionOverline>
@@ -23,7 +24,7 @@ export function Services() {
           </SectionDescription>
         </SectionHeader>
         <div className="grid w-full items-start justify-center gap-6 lg:grid-cols-3">
-          {services.map((service) => (
+          {services.map((service, index) => (
             <div
               key={service.name}
               className="group relative flex h-full flex-col items-start justify-start gap-6 rounded-lg border border-border bg-background p-8 shadow-gray-600 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-primary/50 hover:drop-shadow-xl"
@@ -40,7 +41,10 @@ export function Services() {
                 </span>
               </div>
               <Link
-                href={"/"}
+                href={
+                  routes.servicios.sectionOrder[index]?.path ??
+                  routes.servicios.path
+                }
                 className="flex items-center gap-2 text-secondary transition-all duration-300 hover:translate-x-1 hover:text-primary"
               >
                 <span className="font-medium text-xs uppercase tracking-wider">

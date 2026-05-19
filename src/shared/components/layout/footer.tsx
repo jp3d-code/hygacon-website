@@ -70,11 +70,14 @@ export function Footer() {
             Servicios
           </h4>
           <ul className="space-y-3 pl-4">
-            {services.map((service) => (
+            {services.map((service, index) => (
               <li key={service.name} className="group flex items-center gap-2">
                 <div className="transform-[width] h-0.5 w-0 rounded-full bg-primary duration-300 group-hover:w-3"></div>
                 <Link
-                  href={routes.servicios.path}
+                  href={
+                    routes.servicios.sectionOrder[index]?.path ??
+                    routes.servicios.path
+                  }
                   className="text-sm text-white/70 transition-colors group-hover:text-white"
                 >
                   {service.name}

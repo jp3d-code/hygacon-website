@@ -13,7 +13,12 @@ export default function ServiciosPage() {
     <>
       <PageTitle title={routes.servicios.name} />
       {services.map(({ icon, ...service }, i) => (
-        <ServiceDetail key={service.name} service={service} index={i} />
+        <ServiceDetail
+          key={service.name}
+          service={service}
+          index={i}
+          sectionId={routes.servicios.sectionOrder[i]?.id}
+        />
       ))}
     </>
   );

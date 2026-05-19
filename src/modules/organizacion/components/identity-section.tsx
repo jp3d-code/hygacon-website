@@ -5,12 +5,13 @@ import {
   SectionOverline,
   SectionTitle,
 } from "@/shared/components/ui/section";
+import { routes } from "@/shared/config/routes";
 import { identity } from "@/shared/data/identity";
 import type { IdentityItemList } from "@/shared/types/data";
 
 export function IdentitySection() {
   return (
-    <Section>
+    <Section id={routes.organizacion.sections.identidad.id}>
       <Container>
         <SectionHeader>
           <SectionOverline>Nuestra identidad</SectionOverline>

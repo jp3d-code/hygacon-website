@@ -5,12 +5,16 @@ import {
   SectionOverline,
   SectionTitle,
 } from "@/shared/components/ui/section";
+import { routes } from "@/shared/config/routes";
 import { imageSrc, images } from "@/shared/data/images";
 import { managementSystem } from "@/shared/data/management-system";
 
 export function ManagementSystemSection() {
   return (
-    <Section className="relative overflow-hidden">
+    <Section
+      id={routes.organizacion.sections.sistemaGestion.id}
+      className="relative overflow-hidden"
+    >
       <div
         className="absolute inset-0 z-0"
         style={{

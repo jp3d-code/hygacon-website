@@ -5,12 +5,16 @@ import {
   SectionOverline,
   SectionTitle,
 } from "@/shared/components/ui/section";
+import { routes } from "@/shared/config/routes";
 import { historyEvents } from "@/shared/data/history-events";
 import { cn } from "@/shared/lib/utils";
 
 export function HistorySection() {
   return (
-    <Section className="bg-muted">
+    <Section
+      id={routes.organizacion.sections.historia.id}
+      className="bg-muted"
+    >
       <Container>
         <SectionHeader>
           <SectionOverline>Nuestra trayectoria</SectionOverline>

@@ -5,6 +5,7 @@ import {
   SectionOverline,
   SectionTitle,
 } from "@/shared/components/ui/section";
+import { routes } from "@/shared/config/routes";
 import { team } from "@/shared/data/team";
 
 function getInitials(name: string): string {
@@ -18,7 +19,7 @@ function getInitials(name: string): string {
 
 export function TeamSection() {
   return (
-    <Section>
+    <Section id={routes.organizacion.sections.equipo.id}>
       <Container>
         <SectionHeader>
           <SectionOverline>Las personas detrás de HYGACON</SectionOverline>

@@ -6,11 +6,12 @@ import {
   SectionOverline,
   SectionTitle,
 } from "@/shared/components/ui/section";
+import { routes } from "@/shared/config/routes";
 import sectors from "@/shared/data/sectors";
 
 export function Sectors() {
   return (
-    <Section>
+    <Section id={routes.home.sections.sectores.id}>
       <Container>
         <SectionHeader>
           <SectionOverline>Áreas de especialización</SectionOverline>

@@ -6,11 +6,15 @@ import {
   SectionOverline,
   SectionTitle,
 } from "@/shared/components/ui/section";
+import { routes } from "@/shared/config/routes";
 import certifications from "@/shared/data/certifications";
 
 export function Certifications() {
   return (
-    <Section className="">
+    <Section
+      id={routes.home.sections.certificaciones.id}
+      className=""
+    >
       <Container>
         <SectionHeader className="text-center">
           <SectionOverline className="text-primary">

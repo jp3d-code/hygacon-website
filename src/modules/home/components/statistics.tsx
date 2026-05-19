@@ -1,11 +1,15 @@
 import { Counter } from "@/shared/components/ui/counter";
 import { Container, Section } from "@/shared/components/ui/section";
+import { routes } from "@/shared/config/routes";
 import { imageSrc, images } from "@/shared/data/images";
 import statistics from "@/shared/data/statistics";
 
 export function Statistics() {
   return (
-    <Section className="relative pb-20">
+    <Section
+      id={routes.home.sections.estadisticas.id}
+      className="relative pb-20"
+    >
       <div
         className="absolute inset-0 z-0"
         style={{
