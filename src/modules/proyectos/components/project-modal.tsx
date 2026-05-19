@@ -10,10 +10,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/shared/components/ui/dialog";
-import type { ProjectItem } from "@/shared/types/data";
+import type { Project } from "@/shared/types/data";
 
 type Props = {
-  project: ProjectItem;
+  project: Project;
 };
 
 export function ProjectModal({ project }: Props) {
@@ -32,7 +32,7 @@ export function ProjectModal({ project }: Props) {
           alt={project.name}
           className="aspect-square h-full w-full max-w-sm object-cover object-center"
         />
-        <div className="flex flex-col justify-center gap-6 p-4">
+        <div className="flex flex-col justify-center gap-6 px-6 py-4">
           <DialogHeader>
             <div className="flex flex-wrap items-center gap-2">
               <Badge size={"lg"} variant="muted">

@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { ProjectsPage } from "@/modules/proyectos/components/projects-page";
 import { PageTitle } from "@/shared/components/ui/page-title";
@@ -11,7 +12,9 @@ export default function ProyectosPage() {
   return (
     <>
       <PageTitle title={routes.proyectos.name} />
-      <ProjectsPage />
+      <Suspense fallback={null}>
+        <ProjectsPage />
+      </Suspense>
     </>
   );
 }
