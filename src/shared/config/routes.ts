@@ -1,6 +1,13 @@
 import { createStaticRoute } from "@/shared/lib/routes";
 import { APP_URL } from "./env";
 
+type SectionRoute = {
+  id: string;
+  name: string;
+  path: string;
+  fullPath: string;
+};
+
 const homeRoute = createStaticRoute({
   name: "Inicio",
   path: "/",
@@ -43,10 +50,124 @@ const contactoRoute = createStaticRoute({
   fullPath: `${APP_URL}/contacto`,
 });
 
+const createSection = (
+  route: { path: string; fullPath: string },
+  id: string,
+  name: string,
+): SectionRoute => ({
+  id,
+  name,
+  path: `${route.path}#${id}`,
+  fullPath: `${route.fullPath}#${id}`,
+});
+
+const homeSections = {
+  hero: createSection(homeRoute, "inicio-hero", "Hero"),
+  sectores: createSection(homeRoute, "inicio-sectores", "Sectores"),
+  servicios: createSection(homeRoute, "inicio-servicios", "Servicios"),
+  valores: createSection(homeRoute, "inicio-valores", "Valores"),
+  estadisticas: createSection(
+    homeRoute,
+    "inicio-estadisticas",
+    "Estadísticas",
+  ),
+  certificaciones: createSection(
+    homeRoute,
+    "inicio-certificaciones",
+    "Certificaciones",
+  ),
+  cotizacion: createSection(
+    homeRoute,
+    "inicio-cotizacion",
+    "Cotización",
+  ),
+} as const;
+
+const organizacionSections = {
+  bienvenida: createSection(
+    organizacionRoute,
+    "organizacion-bienvenida",
+    "Bienvenida",
+  ),
+  experiencia: createSection(
+    organizacionRoute,
+    "organizacion-experiencia",
+    "Experiencia",
+  ),
+  identidad: createSection(
+    organizacionRoute,
+    "organizacion-identidad",
+    "Identidad",
+  ),
+  historia: createSection(
+    organizacionRoute,
+    "organizacion-historia",
+    "Historia",
+  ),
+  estadisticas: createSection(
+    organizacionRoute,
+    "organizacion-estadisticas",
+    "Estadísticas",
+  ),
+  equipo: createSection(organizacionRoute, "organizacion-equipo", "Equipo"),
+  valoresCorporativos: createSection(
+    organizacionRoute,
+    "organizacion-valores-corporativos",
+    "Valores corporativos",
+  ),
+  empresasAsociadas: createSection(
+    organizacionRoute,
+    "organizacion-empresas-asociadas",
+    "Empresas asociadas",
+  ),
+  sistemaGestion: createSection(
+    organizacionRoute,
+    "organizacion-sistema-gestion",
+    "Sistema de gestión",
+  ),
+} as const;
+
+const serviciosSections = {
+  mineria: createSection(serviciosRoute, "servicios-mineria", "Minería"),
+  construccionCivil: createSection(
+    serviciosRoute,
+    "servicios-construccion-civil",
+    "Construcción Civil",
+  ),
+  saneamiento: createSection(
+    serviciosRoute,
+    "servicios-saneamiento",
+    "Saneamiento",
+  ),
+  metalmecanica: createSection(
+    serviciosRoute,
+    "servicios-metalmecanica",
+    "Metalmecánica",
+  ),
+  maquinaria: createSection(
+    serviciosRoute,
+    "servicios-maquinaria",
+    "Maquinaria",
+  ),
+} as const;
+
+const serviciosSectionOrder = [
+  serviciosSections.mineria,
+  serviciosSections.construccionCivil,
+  serviciosSections.saneamiento,
+  serviciosSections.metalmecanica,
+  serviciosSections.maquinaria,
+] as const;
+
 export const routes = {
   ...homeRoute,
+  home: {
+    ...homeRoute,
+    sections: homeSections,
+  },
   organizacion: {
     ...organizacionRoute,
+    sections: organizacionSections,
   },
   atencion: {
     ...atencionRoute,
@@ -56,6 +177,8 @@ export const routes = {
   },
   servicios: {
     ...serviciosRoute,
+    sections: serviciosSections,
+    sectionOrder: serviciosSectionOrder,
   },
   clientes: {
     ...clientesRoute,
