@@ -9,6 +9,7 @@ import {
 } from "@/modules/home/animations/hero-stagger";
 import { Button } from "@/shared/components/ui/button";
 import { Section } from "@/shared/components/ui/section";
+import { routes } from "@/shared/config/routes";
 import { imageSrc, images } from "@/shared/data/images";
 import { cn } from "@/shared/lib/utils";
 
@@ -34,6 +35,26 @@ const slides = [
     subtitle: "DE CONSTRUCCION",
     image: imageSrc(images.eff50fdf),
   },
+  {
+    id: 4,
+    title: "PROYECTOS",
+    highlight: "DE",
+    subtitle: "SANEAMIENTO",
+    image: imageSrc(images.d145c549),
+  },
+  {
+    id: 5,
+    title: "INGENIERIA",
+    highlight: "Y SUPERVISION",
+    image: imageSrc(images.f1df974d),
+  },
+  {
+    id: 6,
+    title: "CONSTRUIMOS",
+    highlight: "CON",
+    subtitle: "CALIDAD",
+    image: imageSrc(images.c25d5735),
+  },
 ];
 
 export default function HeroCarousel() {
@@ -51,7 +72,10 @@ export default function HeroCarousel() {
   const currentSlide = slides[index];
 
   return (
-    <Section className="relative h-[90vh] overflow-hidden bg-background">
+    <Section
+      id={routes.home.sections.hero.id}
+      className="relative h-[90vh] overflow-hidden bg-background"
+    >
       <AnimatePresence mode="sync">
         <motion.div
           key={currentSlide.id}
