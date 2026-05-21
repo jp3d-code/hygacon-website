@@ -66,21 +66,13 @@ const homeSections = {
   sectores: createSection(homeRoute, "inicio-sectores", "Sectores"),
   servicios: createSection(homeRoute, "inicio-servicios", "Servicios"),
   valores: createSection(homeRoute, "inicio-valores", "Valores"),
-  estadisticas: createSection(
-    homeRoute,
-    "inicio-estadisticas",
-    "Estadísticas",
-  ),
+  estadisticas: createSection(homeRoute, "inicio-estadisticas", "Estadísticas"),
   certificaciones: createSection(
     homeRoute,
     "inicio-certificaciones",
     "Certificaciones",
   ),
-  cotizacion: createSection(
-    homeRoute,
-    "inicio-cotizacion",
-    "Cotización",
-  ),
+  cotizacion: createSection(homeRoute, "inicio-cotizacion", "Cotización"),
 } as const;
 
 const organizacionSections = {

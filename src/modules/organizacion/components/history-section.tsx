@@ -11,10 +11,7 @@ import { cn } from "@/shared/lib/utils";
 
 export function HistorySection() {
   return (
-    <Section
-      id={routes.organizacion.sections.historia.id}
-      className="bg-muted"
-    >
+    <Section id={routes.organizacion.sections.historia.id} className="bg-muted">
       <Container>
         <SectionHeader>
           <SectionOverline>Nuestra trayectoria</SectionOverline>

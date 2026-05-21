@@ -1,5 +1,5 @@
-import { Suspense } from "react";
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { ProjectsPage } from "@/modules/proyectos/components/projects-page";
 import { PageTitle } from "@/shared/components/ui/page-title";
 import { routes } from "@/shared/config/routes";

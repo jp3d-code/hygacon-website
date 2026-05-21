@@ -5,10 +5,7 @@ import { routes } from "@/shared/config/routes";
 
 export function RequestQuote() {
   return (
-    <Section
-      id={routes.home.sections.cotizacion.id}
-      className="bg-secondary"
-    >
+    <Section id={routes.home.sections.cotizacion.id} className="bg-secondary">
       <Container className="flex flex-col items-center justify-between md:flex-row">
         <div className="flex flex-col gap-4">
           <h2 className="flex flex-wrap justify-center gap-2 font-black text-4xl uppercase md:justify-start">

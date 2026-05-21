@@ -11,10 +11,7 @@ import certifications from "@/shared/data/certifications";
 
 export function Certifications() {
   return (
-    <Section
-      id={routes.home.sections.certificaciones.id}
-      className=""
-    >
+    <Section id={routes.home.sections.certificaciones.id} className="">
       <Container>
         <SectionHeader className="text-center">
           <SectionOverline className="text-primary">

@@ -3,8 +3,7 @@ import { APP_URL } from "@/shared/config/env";
 import { imageSrc, images } from "@/shared/data/images";
 
 const siteName = "Consorcio HYGACON";
-const siteTitle =
-  "Consorcio HYGACON | Ingenieria, Construccion y Saneamiento";
+const siteTitle = "Consorcio HYGACON | Ingenieria, Construccion y Saneamiento";
 const siteDescription =
   "Consorcio HYGACON ejecuta proyectos de ingenieria, construccion, saneamiento, metalmecanica y servicios generales en Peru. Servicios integrales con enfoque en seguridad, medio ambiente y responsabilidad social.";
 const ogImage = imageSrc(images["677bc326"]);
