@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
+import { articles } from "@/db/schema";
 import { db } from "@/lib/db";
-import { articles } from "@/lib/db/schema";
 import { handleDbError } from "@/lib/errors/db";
 import { NotFoundError, UnauthorizedError } from "@/lib/errors/gql";
 import { builder } from "@/lib/schema/builder";

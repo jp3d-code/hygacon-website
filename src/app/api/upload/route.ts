@@ -1,6 +1,6 @@
+import { media } from "@/db/schema";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
-import { media } from "@/lib/db/schema";
 import { UploadMediaPayloadSchema } from "@/lib/schemas";
 import { storage } from "@/lib/storage";
 import {

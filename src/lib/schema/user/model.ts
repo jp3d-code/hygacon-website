@@ -1,4 +1,4 @@
-import { ROLE_VALUES } from "@/lib/db/schema";
+import { ROLE_VALUES } from "@/db/schema";
 import { builder } from "@/lib/schema/builder";
 
 export const Role = builder.enumType("Role", {

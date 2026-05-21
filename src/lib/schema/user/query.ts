@@ -1,6 +1,6 @@
 import { ilike, or } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { users } from "@/lib/db/schema";
+import { users } from "@/db/schema";
 import { handleDbError } from "@/lib/errors/db";
 import { builder } from "@/lib/schema/builder";
 import {

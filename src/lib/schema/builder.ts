@@ -10,8 +10,8 @@ import type {
   MediaModel,
   RoleValue,
   UserModel,
-} from "@/lib/db/schema";
-import { relations } from "@/lib/db/schema";
+} from "@/db/schema";
+import { relations } from "@/db/schema";
 
 type DrizzleRelations = typeof relations;
 
