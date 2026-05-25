@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import type { ArticleSummary } from "@/shared/types/data";
+import type { Article, Tag } from "@/payload-types";
 
 export type ArticleFilters = {
   query: string;
@@ -24,7 +24,7 @@ const matchesSelect = (
   defaultValue: string,
 ) => filterValue === defaultValue || value === filterValue;
 
-const matchesQuery = (article: ArticleSummary, query: string) => {
+const matchesQuery = (article: Article, query: string) => {
   if (!query) {
     return true;
   }
@@ -89,7 +89,7 @@ const parseFilters = (
   };
 };
 
-export function useArticles(articlesData: ArticleSummary[], tags: string[]) {
+export function useArticles(articlesData: Article[], tags: Tag[]) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -98,17 +98,19 @@ export function useArticles(articlesData: ArticleSummary[], tags: string[]) {
   const [filters, setFilters] = useState<ArticleFilters>(initialFilters);
   const filtersEnabled = false;
 
-  const tagOptions = useMemo(() => [initialFilters.tag, ...tags], [tags]);
+  const tagOptions = useMemo(
+    () => [initialFilters.tag, ...tags.map((t) => t.name)],
+    [tags],
+  );
 
   const years = useMemo(() => {
     const uniqueYears = Array.from(
       new Set(
         articlesData
-          .map((a) =>
-            a.publishedAt
-              ? new Date(a.publishedAt).getFullYear().toString()
-              : "",
-          )
+          .map((a) => {
+            const date = a.publishedAt ?? a.createdAt;
+            return date ? new Date(date).getFullYear().toString() : "";
+          })
           .filter(Boolean),
       ),
     ).sort((a, b) => Number(b) - Number(a));
@@ -146,7 +148,14 @@ export function useArticles(articlesData: ArticleSummary[], tags: string[]) {
       }
 
       if (
-        !matchesSelect(article.tags.join(", "), filters.tag, initialFilters.tag)
+        !matchesSelect(
+          (article.tags ?? [])
+            .map((tag) => (typeof tag === "object" ? tag.name : ""))
+            .filter(Boolean)
+            .join(", "),
+          filters.tag,
+          initialFilters.tag,
+        )
       ) {
         return false;
       }
@@ -157,8 +166,9 @@ export function useArticles(articlesData: ArticleSummary[], tags: string[]) {
         return false;
       }
 
-      const articleYear = article.publishedAt
-        ? new Date(article.publishedAt).getFullYear().toString()
+      const articleDate = article.publishedAt ?? article.createdAt;
+      const articleYear = articleDate
+        ? new Date(articleDate).getFullYear().toString()
         : "";
 
       if (!matchesSelect(articleYear, filters.year, initialFilters.year)) {

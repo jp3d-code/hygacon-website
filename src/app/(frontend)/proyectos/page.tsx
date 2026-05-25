@@ -3,21 +3,12 @@ import type { Metadata } from "next";
 import { getPayload } from "payload";
 import { Suspense } from "react";
 import { ProjectsPage } from "@/modules/proyectos/components/projects-page";
-import type { Project as PayloadProject } from "@/payload-types";
+import type { Project } from "@/payload-types";
 import { PageTitle } from "@/shared/components/ui/page-title";
 import { routes } from "@/shared/config/routes";
-import { getMediaUrl } from "@/shared/lib/utils";
-import type { Project } from "@/shared/types/data";
 
 export const metadata: Metadata = {
   title: routes.proyectos.name,
-};
-
-const toProjectCard = (project: PayloadProject): Project => {
-  return {
-    ...project,
-    image: getMediaUrl(project.image),
-  };
 };
 
 async function getProjects(): Promise<Project[]> {
@@ -28,7 +19,7 @@ async function getProjects(): Promise<Project[]> {
     sort: "-year",
   });
 
-  return docs.map(toProjectCard);
+  return docs;
 }
 
 export default async function ProyectosPage() {

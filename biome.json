@@ -14,7 +14,8 @@
       "!dist",
       "!build",
       "!src/*-types.ts",
-      "!**/importMap.js"
+      "!**/importMap.js",
+      "!src/migrations"
     ]
   },
   "css": {

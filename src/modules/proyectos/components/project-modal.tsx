@@ -1,5 +1,6 @@
 "use client";
 
+import type { Project } from "@/payload-types";
 import { Badge } from "@/shared/components/ui/badge";
 import { Button } from "@/shared/components/ui/button";
 import {
@@ -10,7 +11,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/shared/components/ui/dialog";
-import type { Project } from "@/shared/types/data";
+import { getMediaUrl } from "@/shared/lib/utils";
 
 type Props = {
   project: Project;
@@ -28,7 +29,7 @@ export function ProjectModal({ project }: Props) {
       />
       <DialogContent className="flex gap-0 overflow-hidden p-0 sm:max-w-5xl">
         <img
-          src={project.image}
+          src={getMediaUrl(project.image)}
           alt={project.name}
           className="aspect-square h-full w-full max-w-sm object-cover object-center"
         />

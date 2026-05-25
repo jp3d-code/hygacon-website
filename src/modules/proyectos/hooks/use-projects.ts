@@ -2,8 +2,8 @@
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import type { Project } from "@/payload-types";
 import { projectFilters } from "@/shared/data/projects";
-import type { Project } from "@/shared/types/data";
 
 export type ProjectFilters = {
   query: string;

@@ -3,12 +3,12 @@
 import { ArticleCard } from "@/modules/articulos/components/articles-card";
 import { ArticlesFilter } from "@/modules/articulos/components/articles-filter";
 import { useArticles } from "@/modules/articulos/hooks/use-articles";
+import type { Article, Tag } from "@/payload-types";
 import { Container, Section } from "@/shared/components/ui/section";
-import type { ArticleSummary } from "@/shared/types/data";
 
 type Props = {
-  articles: ArticleSummary[];
-  tags: string[];
+  articles: Article[];
+  tags: Tag[];
 };
 
 export function ArticlesPage({ articles, tags }: Props) {

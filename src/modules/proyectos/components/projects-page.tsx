@@ -3,8 +3,8 @@
 import { ProjectCard } from "@/modules/proyectos/components/projects-card";
 import { ProjectsFilter } from "@/modules/proyectos/components/projects-filter";
 import { useProjects } from "@/modules/proyectos/hooks/use-projects";
+import type { Project } from "@/payload-types";
 import { Container, Section } from "@/shared/components/ui/section";
-import type { Project } from "@/shared/types/data";
 
 type Props = {
   projects: Project[];

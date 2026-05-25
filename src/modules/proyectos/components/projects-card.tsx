@@ -1,7 +1,8 @@
 import { ProjectModal } from "@/modules/proyectos/components/project-modal";
+import type { Project } from "@/payload-types";
 import { Badge } from "@/shared/components/ui/badge";
 import { Card, CardContent, CardFooter } from "@/shared/components/ui/card";
-import type { Project } from "@/shared/types/data";
+import { getMediaUrl } from "@/shared/lib/utils";
 
 type Props = {
   project: Project;
@@ -12,7 +13,7 @@ export function ProjectCard({ project, i }: Props) {
   return (
     <Card key={project.id} className="shadow-sm" i={i}>
       <img
-        src={project.image}
+        src={getMediaUrl(project.image)}
         alt={project.name}
         className="h-56 w-full object-cover"
       />

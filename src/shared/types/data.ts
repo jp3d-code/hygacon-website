@@ -115,29 +115,3 @@ export type ClientCommitment = {
   title: string;
   description: string;
 };
-
-export type Project = {
-  id: number;
-  name: string;
-  sector: string;
-  serviceArea: string;
-  status: string;
-  country: string;
-  client: string;
-  location: string;
-  year: string;
-  modality: string;
-  summary: string;
-  image: string;
-};
-
-export type ArticleSummary = {
-  id: number;
-  title: string;
-  slug: string;
-  excerpt?: string | null;
-  coverImage: string;
-  publishedAt?: string | null;
-  status: "draft" | "published";
-  tags: string[];
-};
