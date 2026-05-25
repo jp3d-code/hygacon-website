@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { projectFilters, projects } from "@/shared/data/projects";
+import { projectFilters } from "@/shared/data/projects";
 import type { Project } from "@/shared/types/data";
 
 export type ProjectFilters = {
@@ -111,17 +111,18 @@ const parseFilters = (
   };
 };
 
-export function useProjects() {
+export function useProjects(projectsData: Project[]) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const lastParamsRef = useRef<string | null>(null);
 
   const [filters, setFilters] = useState<ProjectFilters>(initialFilters);
+  const filtersEnabled = false;
 
   const clients = useMemo(
-    () => Array.from(new Set(projects.map((project) => project.client))),
-    [],
+    () => Array.from(new Set(projectsData.map((project) => project.client))),
+    [projectsData],
   );
 
   const clientOptions = useMemo(
@@ -150,7 +151,7 @@ export function useProjects() {
   const filteredProjects = useMemo(() => {
     const query = filters.query.trim().toLowerCase();
 
-    return projects.filter((project) => {
+    return projectsData.filter((project) => {
       if (!matchesQuery(project, query)) {
         return false;
       }
@@ -185,7 +186,9 @@ export function useProjects() {
 
       return true;
     });
-  }, [filters]);
+  }, [filters, projectsData]);
+
+  const visibleProjects = filtersEnabled ? filteredProjects : projectsData;
 
   const resetFilters = useCallback(() => {
     setFilters(initialFilters);
@@ -205,10 +208,10 @@ export function useProjects() {
   return {
     clientOptions,
     filters,
-    filteredProjects,
+    filteredProjects: visibleProjects,
     resetFilters,
-    resultCount: filteredProjects.length,
+    resultCount: visibleProjects.length,
     setFilters,
-    totalCount: projects.length,
+    totalCount: projectsData.length,
   };
 }

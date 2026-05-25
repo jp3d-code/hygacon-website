@@ -16,7 +16,7 @@ export const projectFilters = {
 
 export const projects: Project[] = [
   {
-    id: "planta-metalurgica-shahuindo",
+    id: 1,
     name: "Planta Metalúrgica Shahuindo",
     sector: "Minería",
     serviceArea: "Metalurgia",
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     image: imageSrc(images.db5b829e),
   },
   {
-    id: "truck-shop-cerro-verde",
+    id: 2,
     name: "Truck Shop Cerro Verde",
     sector: "Minería",
     serviceArea: "Construcción",
@@ -46,7 +46,7 @@ export const projects: Project[] = [
     image: imageSrc(images.f6547048),
   },
   {
-    id: "planta-metalurgica-la-arena",
+    id: 3,
     name: "Planta Metalúrgica La Arena",
     sector: "Minería",
     serviceArea: "Metalurgia",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     image: imageSrc(images["01c01b59"]),
   },
   {
-    id: "planta-metalurgica-la-zanja",
+    id: 4,
     name: "Planta Metalúrgica La Zanja",
     sector: "Minería",
     serviceArea: "Ingeniería",
@@ -76,7 +76,7 @@ export const projects: Project[] = [
     image: imageSrc(images["39c03d38"]),
   },
   {
-    id: "planta-cic-minsur",
+    id: 5,
     name: "Planta CIC Minsur",
     sector: "Minería",
     serviceArea: "Ingeniería",
@@ -91,7 +91,7 @@ export const projects: Project[] = [
     image: imageSrc(images["3314858f"]),
   },
   {
-    id: "truck-shop-las-bambas",
+    id: 6,
     name: "Truck Shop Las Bambas",
     sector: "Minería",
     serviceArea: "Construcción",
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     image: imageSrc(images["0384e667"]),
   },
   {
-    id: "truck-shop-mina-justa",
+    id: 7,
     name: "Truck Shop Mina Justa",
     sector: "Minería",
     serviceArea: "Construcción",
@@ -121,7 +121,7 @@ export const projects: Project[] = [
     image: imageSrc(images.f1df974d),
   },
   {
-    id: "planta-adr-comarsa",
+    id: 8,
     name: "Planta ADR COMARSA",
     sector: "Minería",
     serviceArea: "Construcción",
@@ -136,7 +136,7 @@ export const projects: Project[] = [
     image: imageSrc(images["3cdce100"]),
   },
   {
-    id: "truck-shop-toquepala",
+    id: 9,
     name: "Truck Shop Toquepala",
     sector: "Minería",
     serviceArea: "Construcción",
@@ -150,7 +150,7 @@ export const projects: Project[] = [
     image: imageSrc(images.eff50fdf),
   },
   {
-    id: "epc-planta-merrill-crowe-coimolache",
+    id: 10,
     name: "EPC Planta Merrill & Crowe Coimolache",
     sector: "Minería",
     serviceArea: "Construcción",

@@ -4,8 +4,13 @@ import { ProjectCard } from "@/modules/proyectos/components/projects-card";
 import { ProjectsFilter } from "@/modules/proyectos/components/projects-filter";
 import { useProjects } from "@/modules/proyectos/hooks/use-projects";
 import { Container, Section } from "@/shared/components/ui/section";
+import type { Project } from "@/shared/types/data";
 
-export function ProjectsPage() {
+type Props = {
+  projects: Project[];
+};
+
+export function ProjectsPage({ projects }: Props) {
   const {
     clientOptions,
     filters,
@@ -14,7 +19,7 @@ export function ProjectsPage() {
     resultCount,
     setFilters,
     totalCount,
-  } = useProjects();
+  } = useProjects(projects);
 
   return (
     <Section>

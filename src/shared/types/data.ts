@@ -117,7 +117,7 @@ export type ClientCommitment = {
 };
 
 export type Project = {
-  id: string;
+  id: number;
   name: string;
   sector: string;
   serviceArea: string;
