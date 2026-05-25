@@ -13,7 +13,8 @@
       "!.next",
       "!dist",
       "!build",
-      "!src/*-types.ts"
+      "!src/*-types.ts",
+      "!**/importMap.js"
     ]
   },
   "css": {
