@@ -1,7 +1,5 @@
-ignoredBuiltDependencies:
+onlyBuiltDependencies:
   - sharp
   - unrs-resolver
-
-onlyBuiltDependencies:
   - esbuild
   - msw
