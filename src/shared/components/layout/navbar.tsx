@@ -14,6 +14,7 @@ const navItems = [
   routes.organizacion,
   routes.servicios,
   routes.proyectos,
+  routes.articulos,
   routes.clientes,
   routes.atencion,
 ];

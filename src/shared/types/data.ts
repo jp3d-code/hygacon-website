@@ -130,3 +130,14 @@ export type Project = {
   summary: string;
   image: string;
 };
+
+export type ArticleSummary = {
+  id: number;
+  title: string;
+  slug: string;
+  excerpt?: string | null;
+  coverImage: string;
+  publishedAt?: string | null;
+  status: "draft" | "published";
+  tags: string[];
+};

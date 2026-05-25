@@ -22,3 +22,15 @@ export function getMediaUrl(media?: Media | number | null): string {
 
   return media.url ?? "";
 }
+
+export function formatDate(value?: string | null): string {
+  if (!value) {
+    return "";
+  }
+
+  return new Date(value).toLocaleDateString("es-PE", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
+}
