@@ -3,7 +3,7 @@ import { slugify } from "@/shared/lib/slugify";
 import { seedMedia } from "./media";
 import { getPayloadClient } from "./payload";
 
-async function seedProjects() {
+export async function seedProjects() {
   const payload = await getPayloadClient();
 
   const existing = await payload.count({
@@ -47,5 +47,3 @@ async function seedProjects() {
 
   payload.logger.info("Seed completed: projects.");
 }
-
-await seedProjects();
