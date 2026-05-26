@@ -43,5 +43,15 @@ export const Tags: CollectionConfig = {
         return data;
       },
     ],
+    afterChange: [
+      ({ data }) => {
+        if (data?.name && typeof data.name === "string") {
+          return {
+            ...data,
+            name: data.name.slice(0, 1).toUpperCase() + data.name.slice(1),
+          };
+        }
+      },
+    ],
   },
 };

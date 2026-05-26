@@ -1,3 +1,5 @@
+"use client";
+
 import { ProjectModal } from "@/modules/proyectos/components/project-modal";
 import type { Project } from "@/payload-types";
 import { Badge } from "@/shared/components/ui/badge";

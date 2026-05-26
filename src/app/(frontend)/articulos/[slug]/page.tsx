@@ -6,7 +6,7 @@ import { getPayload } from "payload";
 import type { Article, Tag } from "@/payload-types";
 import { Badge } from "@/shared/components/ui/badge";
 import { Container, Section } from "@/shared/components/ui/section";
-import { formatDate, getMediaUrl } from "@/shared/lib/utils";
+import { formatDate, getCollections, getMediaUrl } from "@/shared/lib/utils";
 
 type Props = {
   params: Promise<{
@@ -54,9 +54,7 @@ export default async function ArticuloPage({ params }: Props) {
 
   const coverImage = getMediaUrl(article.coverImage);
   const publishedAt = formatDate(article.publishedAt ?? article.createdAt);
-  const tags = (article.tags ?? []).filter(
-    (tag): tag is Tag => typeof tag === "object" && Boolean(tag?.name),
-  );
+  const tags = getCollections<Tag>(article.tags);
   const contentHtml = convertLexicalToHTML({ data: article.content });
 
   return (

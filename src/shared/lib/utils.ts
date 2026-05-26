@@ -34,3 +34,12 @@ export function formatDate(value?: string | null): string {
     year: "numeric",
   });
 }
+
+export function getCollections<T extends { id: number | string }>(
+  value?: Array<T | number | string | null> | null,
+): T[] {
+  return (value ?? []).filter(
+    (item): item is T =>
+      item !== null && typeof item === "object" && "id" in item,
+  );
+}

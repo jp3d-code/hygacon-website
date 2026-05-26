@@ -1,10 +1,14 @@
+import "dotenv/config";
+import { seedArticles } from "./articles";
 import { seedMedia } from "./media";
 import { seedProjects } from "./projects";
-import "dotenv/config";
+import { seedTags } from "./tags";
 
 async function main() {
   await seedMedia();
+  await seedTags();
   await seedProjects();
+  await seedArticles();
 }
 
 main().catch((error) => {

@@ -22,7 +22,7 @@ export function ProjectModal({ project }: Props) {
     <Dialog>
       <DialogTrigger
         render={
-          <Button variant="link" className="p-0 text-primary">
+          <Button variant="link" className="cursor-pointer p-0 text-primary">
             Ver detalle
           </Button>
         }
