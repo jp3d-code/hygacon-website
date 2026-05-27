@@ -17,16 +17,16 @@ export function ArticleCard({ article, i }: Props) {
   return (
     <Card key={article.id} className="py-0 shadow-sm" i={i}>
       <Link href={`/articulos/${article.slug}`} className="group">
-        {coverImage ? (
-          <img
-            src={coverImage}
-            alt={article.title}
-            className="aspect-video w-full object-cover transition-opacity group-hover:opacity-90"
-          />
-        ) : (
-          <div className="flex aspect-video w-full items-center justify-center bg-muted"></div>
-        )}
-        <CardContent className="flex flex-col gap-3">
+        <div className="flex aspect-video w-full items-center justify-center overflow-hidden bg-muted">
+          {coverImage && (
+            <img
+              src={coverImage}
+              alt={article.title}
+              className="aspect-video w-full object-cover transition-transform group-hover:scale-105"
+            />
+          )}
+        </div>
+        <CardContent className="flex flex-col gap-4 p-4">
           <div className="flex flex-wrap gap-2">
             {tags.slice(0, 3).map((tag) => (
               <Badge key={tag.name} variant="secondary" size="sm">
@@ -35,7 +35,7 @@ export function ArticleCard({ article, i }: Props) {
             ))}
           </div>
           <div>
-            <h3 className="font-bold text-lg text-secondary transition-colors group-hover:text-primary">
+            <h3 className="font-bold font-condensed text-secondary text-xl transition-colors group-hover:text-primary">
               {article.title}
             </h3>
             {article.excerpt && (
