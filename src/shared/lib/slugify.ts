@@ -1,7 +1,10 @@
-export const slugify = (value: string): string =>
-  value
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/\p{Diacritic}/gu, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)+/g, "");
+import slugifyLib from "slugify";
+
+export const slugify = (value: string) =>
+  slugifyLib(value, {
+    lower: true,
+    strict: true,
+    locale: "es",
+    trim: true,
+    replacement: "-",
+  });
