@@ -17,7 +17,7 @@ export function ProjectCard({ project, i }: Props) {
       <img
         src={getMediaUrl(project.image)}
         alt={project.name}
-        className="h-56 w-full object-cover"
+        className="aspect-video w-full object-cover"
       />
       <CardContent className="flex flex-col gap-4">
         <div className="flex items-center justify-between">

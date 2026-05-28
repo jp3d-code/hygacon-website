@@ -27,11 +27,11 @@ export function ProjectModal({ project }: Props) {
           </Button>
         }
       />
-      <DialogContent className="flex gap-0 overflow-hidden p-0 sm:max-w-5xl">
+      <DialogContent className="flex flex-col gap-0 overflow-hidden p-0 sm:max-w-5xl md:flex-row">
         <img
           src={getMediaUrl(project.image)}
           alt={project.name}
-          className="aspect-square h-full w-full max-w-sm object-cover object-center"
+          className="aspect-video h-full w-full max-w-sm object-cover object-center md:aspect-square"
         />
         <div className="flex flex-col justify-center gap-6 px-6 py-4">
           <DialogHeader>
