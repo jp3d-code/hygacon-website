@@ -2,7 +2,16 @@ import type { Tag } from "@/payload-types";
 import { slugify } from "@/shared/lib/slugify";
 import { getPayloadClient } from "./payload";
 
-const tagNames = ["Ingenieria", "Gestion", "Sostenibilidad"];
+const tagNames = [
+  "Ingeniería",
+  "Gestión",
+  "Sostenibilidad",
+  "Proyectos",
+  "Innovación",
+  "Construcción",
+  "Infraestructura",
+  "Tecnología",
+];
 
 export async function seedTags() {
   const payload = await getPayloadClient();
