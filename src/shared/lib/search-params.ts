@@ -20,9 +20,31 @@ type FilterConfig<TParams extends SearchParams> = {
   resolve: FilterResolver<TParams>;
 };
 
+type PaginationConfig<TParams extends SearchParams> = {
+  pageKey?: FilterKey<TParams>;
+  limitKey?: FilterKey<TParams>;
+  defaultPage?: number;
+  defaultLimit?: number;
+  maxLimit?: number;
+};
+
 type ManageSearchParamsConfig<TParams extends SearchParams> = {
   query?: QueryConfig<TParams>;
   filters?: Array<FilterConfig<TParams>>;
+  pagination?: PaginationConfig<TParams>;
+};
+
+type ManageSearchParamsResult = {
+  where?: Where;
+  pagination?: {
+    page: number;
+    limit: number;
+  };
+};
+
+type ManageSearchParamsWithPaginationResult = {
+  where?: Where;
+  pagination: { page: number; limit: number };
 };
 
 export const resolveEquals =
@@ -43,10 +65,36 @@ export const resolveIn =
       },
     }) as Where;
 
+const parsePositiveInt = (value: SearchParamValue, fallback: number) => {
+  if (typeof value !== "string") {
+    return fallback;
+  }
+
+  const parsed = Number.parseInt(value, 10);
+
+  if (Number.isNaN(parsed) || parsed < 1) {
+    return fallback;
+  }
+
+  return parsed;
+};
+
+export function manageSearchParams<TParams extends SearchParams>(
+  params: TParams,
+  config: ManageSearchParamsConfig<TParams> & {
+    pagination: PaginationConfig<TParams>;
+  },
+): ManageSearchParamsWithPaginationResult;
+
 export function manageSearchParams<TParams extends SearchParams>(
   params: TParams,
   config: ManageSearchParamsConfig<TParams>,
-): Where | undefined {
+): ManageSearchParamsResult;
+
+export function manageSearchParams<TParams extends SearchParams>(
+  params: TParams,
+  config: ManageSearchParamsConfig<TParams>,
+): ManageSearchParamsResult | ManageSearchParamsWithPaginationResult {
   const conditions: Where[] = [];
 
   if (config.query) {
@@ -83,10 +131,65 @@ export function manageSearchParams<TParams extends SearchParams>(
   }
 
   if (conditions.length === 0) {
-    return undefined;
+    const pagination = config.pagination
+      ? {
+          pageKey: config.pagination.pageKey ?? ("page" as FilterKey<TParams>),
+          limitKey:
+            config.pagination.limitKey ?? ("limit" as FilterKey<TParams>),
+          defaultPage: Math.max(1, config.pagination.defaultPage ?? 1),
+          defaultLimit: Math.max(1, config.pagination.defaultLimit ?? 12),
+          maxLimit: config.pagination.maxLimit,
+        }
+      : null;
+
+    return {
+      where: undefined,
+      pagination: pagination
+        ? {
+            page: parsePositiveInt(
+              params[pagination.pageKey],
+              pagination.defaultPage,
+            ),
+            limit: Math.min(
+              parsePositiveInt(
+                params[pagination.limitKey],
+                pagination.defaultLimit,
+              ),
+              pagination.maxLimit ?? Number.POSITIVE_INFINITY,
+            ),
+          }
+        : undefined,
+    };
   }
 
+  const pagination = config.pagination
+    ? {
+        pageKey: config.pagination.pageKey ?? ("page" as FilterKey<TParams>),
+        limitKey: config.pagination.limitKey ?? ("limit" as FilterKey<TParams>),
+        defaultPage: Math.max(1, config.pagination.defaultPage ?? 1),
+        defaultLimit: Math.max(1, config.pagination.defaultLimit ?? 12),
+        maxLimit: config.pagination.maxLimit,
+      }
+    : null;
+
   return {
-    and: conditions,
+    where: {
+      and: conditions,
+    },
+    pagination: pagination
+      ? {
+          page: parsePositiveInt(
+            params[pagination.pageKey],
+            pagination.defaultPage,
+          ),
+          limit: Math.min(
+            parsePositiveInt(
+              params[pagination.limitKey],
+              pagination.defaultLimit,
+            ),
+            pagination.maxLimit ?? Number.POSITIVE_INFINITY,
+          ),
+        }
+      : undefined,
   };
 }

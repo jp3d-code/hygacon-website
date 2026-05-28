@@ -46,11 +46,17 @@ export function getCollections<T extends { id: number | string }>(
 
 export type Option<T = string> = { value: T; label: string };
 
-export function toOptions(items: (string | number)[], resolver?: (item: string | number) => Option<string>): Option<string>[];
-export function toOptions<T>(items: T[], resolver: (item: T) => Option<string>): Option<string>[];
+export function toOptions(
+  items: (string | number)[],
+  resolver?: (item: string | number) => Option<string>,
+): Option<string>[];
 export function toOptions<T>(
   items: T[],
-  resolver?: (item: T) => Option<string>
+  resolver: (item: T) => Option<string>,
+): Option<string>[];
+export function toOptions<T>(
+  items: T[],
+  resolver?: (item: T) => Option<string>,
 ): Option<string>[] {
   if (!items || !Array.isArray(items)) return [];
 

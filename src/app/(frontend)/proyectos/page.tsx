@@ -4,6 +4,7 @@ import { getPayload } from "payload";
 import { Suspense } from "react";
 import { ProjectsFilter } from "@/modules/proyectos/components/projects-filter";
 import { ProjectsGrid } from "@/modules/proyectos/components/projects-grid";
+import { ListPagination } from "@/shared/components/layout/pagination";
 import { PageTitle } from "@/shared/components/ui/page-title";
 import { Container, Section } from "@/shared/components/ui/section";
 import { routes } from "@/shared/config/routes";
@@ -19,12 +20,14 @@ type SearchParams = Promise<{
   serviceArea?: string;
   status?: string;
   client?: string;
+  page?: string;
+  limit?: string;
 }>;
 
 async function getProjects(searchParams: Awaited<SearchParams>) {
   const payload = await getPayload({ config });
 
-  const where = manageSearchParams(searchParams, {
+  const { where, pagination } = manageSearchParams(searchParams, {
     query: {
       key: "query",
       fields: ["name", "client", "location"],
@@ -35,17 +38,25 @@ async function getProjects(searchParams: Awaited<SearchParams>) {
       { key: "status", resolve: resolveEquals() },
       { key: "client", resolve: resolveEquals() },
     ],
+    pagination: {
+      defaultPage: 1,
+      defaultLimit: 9,
+    },
   });
 
-  const { docs, totalDocs } = await payload.find({
+  const page = pagination.page;
+  const limit = pagination.limit;
+
+  const { docs, totalDocs, totalPages } = await payload.find({
     collection: "projects",
     depth: 1,
     sort: "-year",
     where,
-    limit: 100,
+    page,
+    limit,
   });
 
-  return { projects: docs, totalDocs };
+  return { projects: docs, totalDocs, totalPages, currentPage: page };
 }
 
 async function getProjectFilterOptions() {
@@ -111,6 +122,10 @@ export default async function ProyectosPage(props: {
               statusOptions={filterOptions.statuses}
             />
             <ProjectsGrid projects={projects.projects} />
+            <ListPagination
+              totalPages={projects.totalPages}
+              currentPage={projects.currentPage}
+            />
           </Container>
         </Section>
       </Suspense>
