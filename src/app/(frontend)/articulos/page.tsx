@@ -2,8 +2,10 @@ import config from "@payload-config";
 import type { Metadata } from "next";
 import { getPayload } from "payload";
 import { Suspense } from "react";
-import { ArticlesPage } from "@/modules/articulos/components/articles-page";
+import { ArticlesFilter } from "@/modules/articulos/components/articles-filter";
+import { ArticlesGrid } from "@/modules/articulos/components/articles-grid";
 import { PageTitle } from "@/shared/components/ui/page-title";
+import { Container, Section } from "@/shared/components/ui/section";
 import { routes } from "@/shared/config/routes";
 import {
   manageSearchParams,
@@ -67,7 +69,16 @@ export default async function ArticulosPage(props: {
     <>
       <PageTitle title={routes.articulos.name} />
       <Suspense fallback={null}>
-        <ArticlesPage articles={articles} totalDocs={totalDocs} tags={tags} />
+        <Section>
+          <Container className="gap-10" animation={false}>
+            <ArticlesFilter
+              totalCount={totalDocs}
+              resultCount={articles.length}
+              tagOptions={tags}
+            />
+            <ArticlesGrid articles={articles} />
+          </Container>
+        </Section>
       </Suspense>
     </>
   );

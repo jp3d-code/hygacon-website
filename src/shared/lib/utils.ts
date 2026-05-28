@@ -43,3 +43,24 @@ export function getCollections<T extends { id: number | string }>(
       item !== null && typeof item === "object" && "id" in item,
   );
 }
+
+export type Option<T = string> = { value: T; label: string };
+
+export function toOptions(items: (string | number)[], resolver?: (item: string | number) => Option<string>): Option<string>[];
+export function toOptions<T>(items: T[], resolver: (item: T) => Option<string>): Option<string>[];
+export function toOptions<T>(
+  items: T[],
+  resolver?: (item: T) => Option<string>
+): Option<string>[] {
+  if (!items || !Array.isArray(items)) return [];
+
+  return items.map((item) => {
+    if (typeof item === "string" || typeof item === "number") {
+      return { value: String(item), label: String(item) } as Option<string>;
+    }
+    if (resolver) {
+      return resolver(item);
+    }
+    throw new Error("toOptions: resolver is required for non-primitive items");
+  });
+}

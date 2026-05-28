@@ -21,17 +21,6 @@ type SearchParams = Promise<{
   client?: string;
 }>;
 
-/*
-manageSeatchParams({
-query: [
-"name", "client", "location"
-],
-filter: [
-"sector", "serviceArea", "status", "client"
-],
-})
-*/
-
 async function getProjects(searchParams: Awaited<SearchParams>) {
   const payload = await getPayload({ config });
 

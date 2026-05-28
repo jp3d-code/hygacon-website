@@ -8,6 +8,7 @@ import {
   ListToolbarReset,
   ListToolbarSearch,
 } from "@/shared/components/layout/list-toolbar";
+import { toOptions } from "@/shared/lib/utils";
 
 type Props = {
   totalCount: number;
@@ -26,15 +27,6 @@ export function ProjectsFilter({
   serviceAreaOptions = [],
   statusOptions = [],
 }: Props) {
-  const toOptions = (options: string[]) => {
-    const normalized = options[0] === "Todos" ? options.slice(1) : options;
-
-    return normalized.map((opt) => ({
-      value: opt,
-      label: opt,
-    }));
-  };
-
   return (
     <div className="w-full rounded-xl border border-border bg-muted/40 p-6">
       <div className="mb-4 flex flex-col gap-2">

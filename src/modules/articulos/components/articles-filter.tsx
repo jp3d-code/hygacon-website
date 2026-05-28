@@ -1,6 +1,6 @@
 "use client";
 
-import type { FilterOption } from "@/shared/components/layout/list-toolbar";
+import type { Tag } from "@/payload-types";
 import {
   ListToolbar,
   ListToolbarCount,
@@ -9,17 +9,18 @@ import {
   ListToolbarReset,
   ListToolbarSearch,
 } from "@/shared/components/layout/list-toolbar";
+import { toOptions } from "@/shared/lib/utils";
 
 type Props = {
   totalCount: number;
   resultCount: number;
-  tagOptions: FilterOption[];
+  tagOptions: Tag[];
 };
 
 export function ArticlesFilter({ totalCount, resultCount, tagOptions }: Props) {
   const statusOptions = [
-    { value: "draft", label: "draft" },
-    { value: "published", label: "published" },
+    { value: "draft", label: "Borrador" },
+    { value: "published", label: "Publicado" },
   ];
 
   return (
@@ -43,7 +44,10 @@ export function ArticlesFilter({ totalCount, resultCount, tagOptions }: Props) {
         <ListToolbarFilter
           queryParamName="tag"
           filterPlaceholder="Etiqueta"
-          filterOptions={tagOptions}
+          filterOptions={toOptions(tagOptions, (tag) => ({
+            label: tag.name,
+            value: tag.id.toString(),
+          }))}
           className="w-full"
         />
 
