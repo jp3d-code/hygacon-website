@@ -1,18 +1,5 @@
 import { imageSrc, images } from "@/shared/data/images";
 
-export const projectFilters = {
-  sector: ["Todos", "Minería", "Oil & Gas", "Industria", "Internacional"],
-  serviceArea: [
-    "Todos",
-    "Metalurgia",
-    "Ingeniería",
-    "Fabricación",
-    "Construcción",
-  ],
-  status: ["Todos", "Concluido", "En ejecución"],
-  country: ["Todos", "Perú"],
-};
-
 export const projects = [
   {
     id: 1,

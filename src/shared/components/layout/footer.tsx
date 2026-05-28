@@ -17,7 +17,7 @@ export function Footer() {
         <div className="flex flex-col gap-4">
           <Link
             href={routes.path}
-            className="font-semibold text-4xl text-secondary-foreground uppercase"
+            className="font-condensed font-semibold text-6xl text-secondary-foreground uppercase"
           >
             HYGACON
           </Link>
