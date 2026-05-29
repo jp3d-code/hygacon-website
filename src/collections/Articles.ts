@@ -3,9 +3,23 @@ import { slugify } from "@/shared/lib/slugify";
 
 export const Articles: CollectionConfig = {
   slug: "articles",
+  labels: {
+    singular: {
+      en: "Article",
+      es: "Artículo",
+    },
+    plural: {
+      en: "Articles",
+      es: "Artículos",
+    },
+  },
   admin: {
     useAsTitle: "title",
     defaultColumns: ["title", "status", "publishedAt", "updatedAt"],
+    group: {
+      en: "Content",
+      es: "Contenido",
+    },
   },
   access: {
     read: () => true,
@@ -18,6 +32,16 @@ export const Articles: CollectionConfig = {
       name: "title",
       type: "text",
       required: true,
+      label: {
+        en: "Title",
+        es: "Título",
+      },
+      admin: {
+        placeholder: {
+          en: "Enter article title",
+          es: "Ingresa el título del artículo",
+        },
+      },
     },
     {
       name: "slug",
@@ -25,6 +49,10 @@ export const Articles: CollectionConfig = {
       required: true,
       unique: true,
       index: true,
+      label: {
+        en: "Slug",
+        es: "Slug",
+      },
       admin: {
         readOnly: true,
         position: "sidebar",
@@ -33,21 +61,42 @@ export const Articles: CollectionConfig = {
     {
       name: "excerpt",
       type: "textarea",
+      label: {
+        en: "Excerpt",
+        es: "Extracto",
+      },
+      admin: {
+        placeholder: {
+          en: "Enter article excerpt",
+          es: "Ingresa el extracto del artículo",
+        },
+      },
     },
     {
       name: "content",
       type: "richText",
       required: true,
+      label: {
+        en: "Content",
+        es: "Contenido",
+      },
     },
     {
       name: "coverImage",
-      label: "Cover Image",
+      label: {
+        en: "Cover Image",
+        es: "Imagen de portada",
+      },
       type: "upload",
       relationTo: "media",
     },
     {
       name: "publishedAt",
       type: "date",
+      label: {
+        en: "Published At",
+        es: "Fecha de publicación",
+      },
       admin: {
         position: "sidebar",
       },
@@ -57,13 +106,23 @@ export const Articles: CollectionConfig = {
       type: "select",
       required: true,
       defaultValue: "draft",
+      label: {
+        en: "Status",
+        es: "Estado",
+      },
       options: [
         {
-          label: "Draft",
+          label: {
+            en: "Draft",
+            es: "Borrador",
+          },
           value: "draft",
         },
         {
-          label: "Published",
+          label: {
+            en: "Published",
+            es: "Publicado",
+          },
           value: "published",
         },
       ],
@@ -76,6 +135,10 @@ export const Articles: CollectionConfig = {
       type: "relationship",
       relationTo: "tags",
       hasMany: true,
+      label: {
+        en: "Tags",
+        es: "Etiquetas",
+      },
     },
   ],
   timestamps: true,

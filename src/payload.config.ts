@@ -2,6 +2,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { sqliteAdapter } from "@payloadcms/db-sqlite";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
+import { en } from "@payloadcms/translations/languages/en";
+import { es } from "@payloadcms/translations/languages/es";
 import { buildConfig } from "payload";
 import sharp from "sharp";
 import { Articles } from "./collections/Articles";
@@ -33,4 +35,8 @@ export default buildConfig({
   }),
   sharp: sharp,
   plugins: [],
+  i18n: {
+    fallbackLanguage: "en",
+    supportedLanguages: { en, es },
+  },
 });

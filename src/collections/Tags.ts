@@ -3,8 +3,22 @@ import { slugify } from "@/shared/lib/slugify";
 
 export const Tags: CollectionConfig = {
   slug: "tags",
+  labels: {
+    singular: {
+      en: "Tag",
+      es: "Etiqueta",
+    },
+    plural: {
+      en: "Tags",
+      es: "Etiquetas",
+    },
+  },
   admin: {
     useAsTitle: "name",
+    group: {
+      en: "Content",
+      es: "Contenido",
+    },
   },
   access: {
     read: () => true,
@@ -17,6 +31,16 @@ export const Tags: CollectionConfig = {
       name: "name",
       type: "text",
       required: true,
+      label: {
+        en: "Name",
+        es: "Nombre",
+      },
+      admin: {
+        placeholder: {
+          en: "Enter tag name",
+          es: "Ingresa el nombre de la etiqueta",
+        },
+      },
     },
     {
       name: "slug",
@@ -24,6 +48,10 @@ export const Tags: CollectionConfig = {
       required: true,
       unique: true,
       index: true,
+      label: {
+        en: "Slug",
+        es: "Slug",
+      },
       admin: {
         readOnly: true,
         position: "sidebar",
