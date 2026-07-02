@@ -115,8 +115,8 @@ export async function seedArticles({
   const editorConfig: SanitizedServerEditorConfig =
     await editorConfigFactory.default({ config });
 
-  const tagIds = Array.from(tagsBySlug.values());
-  const mediaIds = Array.from(mediaMap.values());
+  const tagIds = [...tagsBySlug.values()];
+  const mediaIds = [...mediaMap.values()];
 
   for (const article of markdownArticles) {
     const lexicalContent = convertMarkdownToLexical({

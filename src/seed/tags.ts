@@ -1,4 +1,3 @@
-import type { Tag } from "@/payload-types";
 import { slugify } from "@/shared/lib/slugify";
 import { getPayloadClient } from "./payload";
 
@@ -31,31 +30,34 @@ export async function seedTags() {
       limit: 1,
     });
 
-    const data: Pick<Tag, "name" | "slug"> = {
-      name,
-      slug,
-    };
-
     if (existing.totalDocs > 0) {
-      const updated = await payload.update({
-        collection: "tags",
-        id: existing.docs[0].id,
-        data,
-        overrideAccess: true,
-      });
-      tagsBySlug.set(slug, updated.id);
+      tagsBySlug.set(slug, existing.docs[0].id);
       continue;
     }
 
-    const created = await payload.create({
+    await payload.create({
       collection: "tags",
-      data,
+      data: {
+        name,
+        slug,
+      },
       overrideAccess: true,
     });
 
-    tagsBySlug.set(slug, created.id);
+    const created = await payload.find({
+      collection: "tags",
+      where: {
+        slug: { equals: slug },
+      },
+      depth: 0,
+      limit: 1,
+    });
+
+    if (created.totalDocs > 0) {
+      tagsBySlug.set(slug, created.docs[0].id);
+    }
   }
 
-  payload.logger.info("Seed completed: tags.");
+  payload.logger.info(`Seed completed: tags. Total: ${tagsBySlug.size}`);
   return tagsBySlug;
 }

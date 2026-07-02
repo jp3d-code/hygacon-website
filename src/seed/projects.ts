@@ -172,7 +172,7 @@ export async function seedProjects({
       continue;
     }
 
-    await payload.create({
+    const created = await payload.create({
       collection: "projects",
       data: {
         name: project.name,
@@ -191,7 +191,7 @@ export async function seedProjects({
       overrideAccess: true,
     });
 
-    projectsBySlug.set(slugify(project.name), mediaId);
+    projectsBySlug.set(slugify(project.name), created.id);
   }
 
   payload.logger.info("Seed completed: projects.");
