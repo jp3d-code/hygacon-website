@@ -13,7 +13,7 @@
     "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
     "reinstall": "cross-env NODE_OPTIONS=--no-deprecation rm -rf node_modules && rm pnpm-lock.yaml && pnpm --ignore-workspace install",
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
-    "seed": "pnpx tsx seed/index.ts",
+    "seed": "node --env-file=.env scripts/seed.mjs",
     "lint": "biome check --write",
     "dev:vinext": "vinext dev --port 3000",
     "build:vinext": "vinext build",

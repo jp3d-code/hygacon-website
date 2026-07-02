@@ -1,6 +1,5 @@
 import { imageSrc, images } from "@/shared/data/images";
 import { slugify } from "@/shared/lib/slugify";
-import { seedMedia } from "./media";
 import { getPayloadClient } from "./payload";
 
 const projects = [
@@ -145,7 +144,13 @@ const projects = [
   },
 ];
 
-export async function seedProjects() {
+export async function seedProjects({
+  tagsBySlug: _tagsBySlug,
+  mediaMap,
+}: {
+  tagsBySlug: Map<string, number>;
+  mediaMap: Map<string, number>;
+}) {
   const payload = await getPayloadClient();
 
   const existing = await payload.count({
@@ -154,10 +159,10 @@ export async function seedProjects() {
 
   if (existing.totalDocs > 0) {
     payload.logger.info("Seed skipped: projects already exist.");
-    return;
+    return new Map<string, number>();
   }
 
-  const mediaMap = await seedMedia();
+  const projectsBySlug = new Map<string, number>();
 
   for (const project of projects) {
     const mediaId = mediaMap.get(project.image);
@@ -185,7 +190,10 @@ export async function seedProjects() {
       },
       overrideAccess: true,
     });
+
+    projectsBySlug.set(slugify(project.name), mediaId);
   }
 
   payload.logger.info("Seed completed: projects.");
+  return projectsBySlug;
 }

@@ -5,7 +5,7 @@ import { getPayloadClient } from "./payload";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
-const assetsDir = path.resolve(dirname, "../public/assets");
+const assetsDir = path.resolve(dirname, "../../public/assets");
 
 const imageEntries = Object.values(images).map((image) => ({
   alt: image.alt,

@@ -101,25 +101,22 @@ La transición hacia una construcción más sostenible no es solo una tendencia,
   },
 ];
 
-export async function seedArticles() {
+export async function seedArticles({
+  tagsBySlug,
+  projectsBySlug: _projectsBySlug,
+  mediaMap,
+}: {
+  tagsBySlug: Map<string, number>;
+  projectsBySlug: Map<string, number>;
+  mediaMap: Map<string, number>;
+}) {
   const payload = await getPayloadClient();
   const config = await configPromise;
   const editorConfig: SanitizedServerEditorConfig =
     await editorConfigFactory.default({ config });
 
-  const tagsResult = await payload.find({
-    collection: "tags",
-    depth: 0,
-    limit: 100,
-  });
-  const tagIds = tagsResult.docs.map((doc) => doc.id);
-
-  const mediaResult = await payload.find({
-    collection: "media",
-    depth: 0,
-    limit: 100,
-  });
-  const mediaIds = mediaResult.docs.map((doc) => doc.id);
+  const tagIds = Array.from(tagsBySlug.values());
+  const mediaIds = Array.from(mediaMap.values());
 
   for (const article of markdownArticles) {
     const lexicalContent = convertMarkdownToLexical({
