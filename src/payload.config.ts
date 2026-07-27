@@ -1,12 +1,12 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { sqliteAdapter } from "@payloadcms/db-sqlite";
+import { postgresAdapter } from "@payloadcms/db-postgres";
+import { s3Storage } from "@payloadcms/storage-s3";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { en } from "@payloadcms/translations/languages/en";
 import { es } from "@payloadcms/translations/languages/es";
 import { buildConfig } from "payload";
 import sharp from "sharp";
-import { migrations } from "@/migrations";
 import { Articles } from "./collections/Articles";
 import { Media } from "./collections/Media";
 import { Projects } from "./collections/Projects";
@@ -29,14 +29,32 @@ export default buildConfig({
   typescript: {
     outputFile: path.resolve(dirname, "payload-types.ts"),
   },
-  db: sqliteAdapter({
-    client: {
-      url: process.env.DATABASE_URL || "",
+  db: postgresAdapter({
+    pool: {
+      connectionString: process.env.DATABASE_URL || "",
     },
-    prodMigrations: migrations,
+    push: false,
+    migrationDir: "./src/migrations",
   }),
   sharp: sharp,
-  plugins: [],
+  plugins: [
+    s3Storage({
+      collections: {
+        media: true,
+      },
+      bucket: process.env.S3_BUCKET || "",
+      config: {
+        credentials: {
+          accessKeyId: process.env.S3_ACCESS_KEY_ID || "",
+          secretAccessKey: process.env.S3_SECRET_ACCESS_KEY || "",
+        },
+        region: process.env.S3_REGION,
+        endpoint: process.env.S3_ENDPOINT,
+        forcePathStyle: true,
+      },
+      clientUploads: true,
+    }),
+  ],
   i18n: {
     fallbackLanguage: "en",
     supportedLanguages: { en, es },

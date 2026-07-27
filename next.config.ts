@@ -9,10 +9,9 @@ const dirname = path.dirname(__filename);
 const nextConfig: NextConfig = {
   output: "standalone",
   images: {
-    localPatterns: [
-      {
-        pathname: "/api/media/file/**",
-      },
+    remotePatterns: [
+      { protocol: "https", hostname: "*.supabase.co" },
+      { protocol: "https", hostname: "*.supabase.in" },
     ],
   },
   webpack: (webpackConfig) => {

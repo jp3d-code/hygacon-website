@@ -53,8 +53,6 @@ COPY --from=builder /app/public ./public
 
 # Set the correct permission for prerender cache
 RUN mkdir .next
-RUN mkdir -p /app/data
-RUN chown -R nextjs:nodejs /app/data
 RUN chown -R nextjs:nodejs .next
 
 # Automatically leverage output traces to reduce image size
@@ -67,7 +65,5 @@ USER nextjs
 EXPOSE 3000
 
 ENV PORT 3000
-
-ENV DATABASE_URL=file:/app/data/dev.db
 
 CMD ["sh", "-c", "HOSTNAME=\"0.0.0.0\" node server.js"]

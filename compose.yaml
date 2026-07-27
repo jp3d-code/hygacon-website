@@ -11,9 +11,7 @@ services:
       - .env
     environment:
       - NODE_ENV=production
-      - DATABASE_URL=file:/app/data/dev.db
     volumes:
-      - payload_db:/app/data
       - payload_media:/app/media
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/"]
@@ -23,5 +21,4 @@ services:
       start_period: 60s
 
 volumes:
-  payload_db:
   payload_media:
